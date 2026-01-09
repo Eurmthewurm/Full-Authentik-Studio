@@ -1,7 +1,11 @@
 import React from 'react';
-import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio, ExternalLink, Users, Sparkles, Fingerprint, ArrowUpRight, Globe, MessageCircle } from 'lucide-react';
+import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio, ExternalLink, Users, Sparkles, Fingerprint, ArrowUpRight, Globe, MessageCircle, Clapperboard, PenTool, Focus } from 'lucide-react';
 
 const DirectorPage: React.FC = () => {
+  const brands = [
+    "MARVEL", "NATIONAL GEOGRAPHIC", "BBC", "DISCOVERY CHANNEL", "SKY PRO CYCLING", "EXPEDIA", "BLACKMAGIC DESIGN", "GRAB", "GARUDA INDONESIA", "SBS", "ARTE"
+  ];
+
   return (
     <div className="pt-20 min-h-screen page-transition bg-[#050505] text-white selection:bg-white selection:text-black">
       
@@ -23,7 +27,7 @@ const DirectorPage: React.FC = () => {
                  <div>
                     <span className="font-mono text-xs text-blue-500 tracking-widest mb-2 block">ERMO EGBERTS</span>
                     <h1 className="text-[12vw] leading-[0.85] font-bold font-display tracking-tighter text-white uppercase">
-                      Director
+                      Creative<br/>Director
                     </h1>
                  </div>
                  <div className="mb-4 md:mb-0 text-right">
@@ -32,6 +36,46 @@ const DirectorPage: React.FC = () => {
                        <span className="text-white">From $2M to $8M.</span>
                     </p>
                  </div>
+              </div>
+           </div>
+        </section>
+
+        {/* 01.5 THE NETWORK / COLLECTIVE TRACK RECORD */}
+        <section className="py-16 border-b border-white/10 bg-[#0a0a0a] overflow-hidden">
+           <div className="px-4 md:px-12 max-w-[1800px] mx-auto mb-12">
+              <div className="flex flex-col md:flex-row gap-8 items-start md:items-center justify-between">
+                 <div className="max-w-3xl">
+                    <div className="flex items-center gap-3 mb-4">
+                       <Clapperboard className="w-4 h-4 text-gray-400" />
+                       <span className="font-mono text-xs text-gray-500 tracking-widest uppercase">Production Capabilities</span>
+                    </div>
+                    <h3 className="text-2xl font-bold mb-4">You hire me for the Vision. I bring the Network.</h3>
+                    <p className="text-lg text-gray-300 font-light leading-relaxed">
+                       A Creative Director is only as good as their execution team. 
+                       I work exclusively with <a href="https://johnwsullivan.com/" target="_blank" rel="noreferrer" className="text-white font-bold underline decoration-blue-500 underline-offset-4 hover:text-blue-400 transition-colors">John W. Sullivan</a> and his elite production unit. 
+                       <br/><br/>
+                       While I architect the brand strategy and visual direction, this team has executed productions for the world's largest networks.
+                    </p>
+                    <p className="text-xs text-gray-500 mt-6 font-mono uppercase tracking-widest">
+                       THE NETWORK'S PRODUCTION CREDITS INCLUDE:
+                    </p>
+                 </div>
+              </div>
+           </div>
+
+           {/* Brand Marquee */}
+           <div className="relative w-full overflow-hidden">
+              <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#0a0a0a] to-transparent z-10"></div>
+              <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0a0a0a] to-transparent z-10"></div>
+              
+              <div className="flex whitespace-nowrap animate-marquee">
+                 {[...brands, ...brands].map((brand, index) => (
+                    <div key={index} className="mx-8 md:mx-16 flex items-center opacity-50 hover:opacity-100 transition-opacity">
+                       <span className="text-3xl md:text-5xl font-display font-bold text-white uppercase tracking-tighter cursor-default">
+                          {brand}
+                       </span>
+                    </div>
+                 ))}
               </div>
            </div>
         </section>
@@ -123,46 +167,77 @@ const DirectorPage: React.FC = () => {
                  </div>
               </div>
 
-              {/* VIMEO TESTIMONIAL EMBED */}
-              <div className="bg-black text-white p-6 md:p-12 relative overflow-hidden rounded-xl md:rounded-3xl shadow-2xl">
-                 <div className="absolute top-0 right-0 p-8 opacity-20 font-display text-9xl font-bold pointer-events-none text-white/10">PROOF</div>
-                 
-                 <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-start">
-                    {/* Video Player */}
-                    <div className="flex-1 w-full group">
-                       <h3 className="text-xs font-mono text-gray-500 mb-4 uppercase tracking-widest flex items-center gap-2">
-                          <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-                          The Debrief • J-Griff x Ermo
-                       </h3>
-                       <div className="w-full aspect-video bg-[#111] border border-white/20 relative overflow-hidden shadow-2xl rounded-lg">
-                          <iframe 
-                             src="https://player.vimeo.com/video/1112128628?title=0&byline=0&portrait=0" 
-                             className="absolute inset-0 w-full h-full"
-                             frameBorder="0" 
-                             allow="autoplay; fullscreen; picture-in-picture" 
-                             allowFullScreen
-                          ></iframe>
-                       </div>
-                    </div>
-                    
-                    {/* Quote & Context */}
-                    <div className="flex-1 flex flex-col justify-center h-full lg:pt-8">
-                       <Quote className="w-12 h-12 text-blue-500 mb-6" />
-                       <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-6">
-                          "We went from $2M to $8M. Ermo was the architect of the visual standard that made that pricing possible."
-                       </h3>
-                       
-                       <div className="flex items-center gap-4 mb-8">
-                          <div className="w-12 h-12 bg-gray-800 rounded-full overflow-hidden">
-                              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=200&auto=format&fit=crop" className="w-full h-full object-cover" />
-                          </div>
-                          <div>
-                              <p className="font-bold text-white">JEREMY GRIFFIN</p>
-                              <p className="font-mono text-xs text-gray-400">FOUNDER, LUC MASTERMIND</p>
-                          </div>
-                       </div>
-                    </div>
-                 </div>
+              {/* EXECUTIVE ENDORSEMENTS - DUAL GRID */}
+              <div className="mb-24">
+                  <div className="flex items-center gap-4 mb-8">
+                      <div className="h-px bg-black/10 flex-1"></div>
+                      <span className="font-mono text-xs text-gray-400 uppercase tracking-widest">The Executive Perspective</span>
+                      <div className="h-px bg-black/10 flex-1"></div>
+                  </div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                      
+                      {/* Video 1: J-GRIFF (FOUNDER) */}
+                      <div className="bg-black text-white p-8 rounded-2xl relative overflow-hidden shadow-2xl group border border-white/5">
+                        <div className="absolute top-0 right-0 p-6 opacity-20 font-display text-6xl font-bold pointer-events-none text-white/10">01</div>
+                        
+                        <h3 className="text-xs font-mono text-gray-500 mb-4 uppercase tracking-widest flex items-center gap-2">
+                           <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                           The Founder's Vision
+                        </h3>
+                        
+                        <div className="w-full aspect-video bg-[#111] border border-white/20 relative overflow-hidden shadow-lg rounded-lg mb-6 group-hover:border-white/40 transition-colors">
+                           <iframe 
+                              src="https://player.vimeo.com/video/1112128628?title=0&byline=0&portrait=0" 
+                              className="absolute inset-0 w-full h-full"
+                              frameBorder="0" 
+                              allow="autoplay; fullscreen; picture-in-picture" 
+                              allowFullScreen
+                           ></iframe>
+                        </div>
+
+                        <div className="flex items-center gap-4 mt-auto">
+                           <div className="w-10 h-10 bg-gray-800 rounded-full overflow-hidden">
+                               <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=200&auto=format&fit=crop" className="w-full h-full object-cover" />
+                           </div>
+                           <div>
+                               <p className="font-bold text-white text-sm">JEREMY GRIFFIN</p>
+                               <p className="font-mono text-[10px] text-gray-400">FOUNDER, LUC MASTERMIND</p>
+                           </div>
+                        </div>
+                      </div>
+
+                      {/* Video 2: JESS (COO) */}
+                      <div className="bg-[#111] text-white p-8 rounded-2xl relative overflow-hidden shadow-2xl group border border-white/5">
+                        <div className="absolute top-0 right-0 p-6 opacity-20 font-display text-6xl font-bold pointer-events-none text-white/10">02</div>
+
+                        <h3 className="text-xs font-mono text-purple-400 mb-4 uppercase tracking-widest flex items-center gap-2">
+                           <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                           The Operations
+                        </h3>
+
+                        <div className="w-full aspect-video bg-[#050505] border border-white/20 relative overflow-hidden shadow-lg rounded-lg mb-6 group-hover:border-purple-500/30 transition-colors">
+                           <iframe 
+                              src="https://player.vimeo.com/video/1152804047?title=0&byline=0&portrait=0" 
+                              className="absolute inset-0 w-full h-full"
+                              frameBorder="0" 
+                              allow="autoplay; fullscreen; picture-in-picture" 
+                              allowFullScreen
+                           ></iframe>
+                        </div>
+
+                         <div className="flex items-center gap-4 mt-auto">
+                           <div className="w-10 h-10 bg-purple-900 rounded-full flex items-center justify-center font-bold text-xs border border-white/10">
+                               J
+                           </div>
+                           <div>
+                               <p className="font-bold text-white text-sm">JESS</p>
+                               <p className="font-mono text-[10px] text-purple-400">COO, LEVEL UP COLLECTIVE</p>
+                           </div>
+                        </div>
+                      </div>
+
+                  </div>
               </div>
 
            </div>
@@ -325,7 +400,7 @@ const DirectorPage: React.FC = () => {
             </div>
         </section>
 
-        {/* 04. CASE STUDY 03: THE GREAT AWAKENING (Compact, Gold/Blue Aesthetic) */}
+        {/* 04. CASE STUDY 03: THE GREAT AWAKENING */}
         <section className="py-20 px-4 md:px-12 bg-[#050505] text-white border-t border-white/10 relative overflow-hidden">
            {/* Abstract Background - Gold/Blue theme */}
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1c] to-[#050505]"></div>
@@ -378,104 +453,97 @@ const DirectorPage: React.FC = () => {
            </div>
         </section>
 
-        {/* 05. THE HUMAN ALGORITHM (Philosophy) */}
+        {/* 05. THE HIERARCHY OF VALUE (Scope of Practice) */}
         <section className="py-32 px-4 md:px-12 bg-white text-black relative">
            <div className="max-w-[1800px] mx-auto">
-              <div className="flex flex-col md:flex-row justify-between items-end mb-16">
-                 <div>
-                    <h2 className="text-5xl md:text-8xl font-display font-bold leading-none mb-6">
-                       THE HUMAN<br/>ALGORITHM
-                    </h2>
-                    <p className="text-xl md:text-2xl text-gray-600 max-w-2xl leading-relaxed">
-                       Algorithms predict behavior. Empathy moves markets.<br/>
-                       <span className="text-black font-bold">I don't just direct. I immerse.</span>
-                    </p>
-                 </div>
-                 <div className="hidden md:block">
-                     <Fingerprint className="w-24 h-24 text-gray-200" />
-                 </div>
+              <div className="mb-16">
+                 <h2 className="text-5xl md:text-8xl font-display font-bold leading-none mb-6">
+                    THE HIERARCHY<br/>OF VALUE
+                 </h2>
+                 <p className="text-xl md:text-2xl text-gray-600 max-w-2xl leading-relaxed">
+                    Clients often confuse "Production" with "Direction".<br/>
+                    Here is exactly what you are hiring me for.
+                 </p>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16">
                  
-                 {/* Card 1: Creative Direction Reel */}
-                 <a 
-                    href="https://www.instagram.com/p/C4yrt0GvrIBu2VEI6BNTzYSXvgqEq8ZL4hg7hE0/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group relative aspect-[4/5] bg-black rounded-lg overflow-hidden cursor-pointer"
-                 >
-                    <img 
-                       src="https://images.unsplash.com/photo-1601506521793-dc748fc80b67?q=80&w=1000&auto=format&fit=crop" // Placeholder for onset/direction
-                       alt="Creative Direction Reel"
-                       className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500"
-                    />
-                    <div className="absolute inset-0 flex flex-col justify-between p-8">
-                       <div className="flex justify-between items-start">
-                          <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                             <span className="text-xs font-mono text-white">REEL • DIRECTING</span>
-                          </div>
-                          <ArrowUpRight className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 group-hover:-translate-y-2" />
-                       </div>
-                       
-                       <div>
-                          <h3 className="text-3xl font-display font-bold text-white mb-2">The Director's Eye</h3>
-                          <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity delay-100">
-                             Behind the scenes. Orchestrating the vision in real-time.
-                          </p>
-                       </div>
-                    </div>
-                    {/* Play Button Overlay */}
-                    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-20 h-20 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
-                       <Instagram className="w-8 h-8 text-white" />
-                    </div>
-                 </a>
+                 {/* Column 1: The Creative Director (Ermo) */}
+                 <div className="border-t-4 border-black pt-8">
+                     <div className="flex items-center gap-3 mb-6">
+                        <PenTool className="w-8 h-8 text-blue-600" />
+                        <h3 className="text-2xl font-bold">The Creative Director</h3>
+                        <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded">ERMO</span>
+                     </div>
+                     <p className="text-lg font-bold mb-4">"I provide the Architecture."</p>
+                     <ul className="space-y-4">
+                        <li className="flex gap-4 items-start">
+                           <span className="font-mono text-xs text-gray-400 mt-1">01</span>
+                           <div>
+                              <h4 className="font-bold">Visual Strategy</h4>
+                              <p className="text-gray-600 text-sm">Translating abstract business goals into concrete visual codes (Color, Tone, Pacing).</p>
+                           </div>
+                        </li>
+                        <li className="flex gap-4 items-start">
+                           <span className="font-mono text-xs text-gray-400 mt-1">02</span>
+                           <div>
+                              <h4 className="font-bold">Narrative Engineering</h4>
+                              <p className="text-gray-600 text-sm">Structuring the "argument" of the content to maximize retention and conversion.</p>
+                           </div>
+                        </li>
+                        <li className="flex gap-4 items-start">
+                           <span className="font-mono text-xs text-gray-400 mt-1">03</span>
+                           <div>
+                              <h4 className="font-bold">Quality Control</h4>
+                              <p className="text-gray-600 text-sm">The final "Yes" or "No". Ensuring the output matches the $8M standard.</p>
+                           </div>
+                        </li>
+                     </ul>
+                 </div>
 
-                 {/* Card 2: Immersion Experience */}
-                 <a 
-                    href="https://www.instagram.com/p/C5oxg6RS8nl51OoxNzmpNm6MjPasuCcEHVGqeM0/"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group relative aspect-[4/5] bg-[#111] rounded-lg overflow-hidden cursor-pointer md:mt-24" // Staggered
-                 >
-                    <img 
-                       src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?q=80&w=1000&auto=format&fit=crop" // Placeholder for lifestyle/immersion
-                       alt="Immersion Experience"
-                       className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 grayscale"
-                    />
-                    <div className="absolute inset-0 flex flex-col justify-between p-8">
-                       <div className="flex justify-between items-start">
-                          <div className="bg-white/10 backdrop-blur-md px-3 py-1 rounded-full border border-white/20">
-                             <span className="text-xs font-mono text-white">LIFESTYLE • IMMERSION</span>
-                          </div>
-                          <ArrowUpRight className="w-8 h-8 text-white opacity-0 group-hover:opacity-100 transition-opacity transform group-hover:translate-x-2 group-hover:-translate-y-2" />
-                       </div>
-                       
-                       <div>
-                          <h3 className="text-3xl font-display font-bold text-white mb-2">Total Immersion</h3>
-                          <p className="text-gray-300 text-sm opacity-0 group-hover:opacity-100 transition-opacity delay-100">
-                             I live the brand to understand the customer. Authenticity cannot be faked.
-                          </p>
-                       </div>
-                    </div>
-                 </a>
+                 {/* Column 2: The Network (Production) */}
+                 <div className="border-t-4 border-gray-200 pt-8 opacity-75">
+                     <div className="flex items-center gap-3 mb-6">
+                        <Focus className="w-8 h-8 text-gray-400" />
+                        <h3 className="text-2xl font-bold text-gray-500">The Production Unit</h3>
+                        <span className="bg-gray-100 text-gray-500 text-xs font-bold px-2 py-1 rounded">NETWORK</span>
+                     </div>
+                     <p className="text-lg font-bold mb-4 text-gray-500">"They provide the Assets."</p>
+                     <ul className="space-y-4">
+                        <li className="flex gap-4 items-start">
+                           <span className="font-mono text-xs text-gray-300 mt-1">01</span>
+                           <div>
+                              <h4 className="font-bold text-gray-500">Cinematography</h4>
+                              <p className="text-gray-400 text-sm">Cameras, Lighting, Lenses. Handled by John W. Sullivan & Co.</p>
+                           </div>
+                        </li>
+                        <li className="flex gap-4 items-start">
+                           <span className="font-mono text-xs text-gray-300 mt-1">02</span>
+                           <div>
+                              <h4 className="font-bold text-gray-500">Logistics</h4>
+                              <p className="text-gray-400 text-sm">Locations, Crew Management, Equipment Rental.</p>
+                           </div>
+                        </li>
+                     </ul>
+                 </div>
 
               </div>
            </div>
         </section>
 
         {/* 06. HIRE FOOTER */}
-        <section id="contact-director" className="py-32 px-4 md:px-12 bg-white text-black text-center">
+        <section id="contact-director" className="py-32 px-4 md:px-12 bg-white text-black text-center border-t border-gray-100">
            <p className="font-mono text-xs text-blue-600 tracking-widest mb-6">AVAILABILITY: Q3 2026</p>
            <h2 className="text-5xl md:text-9xl font-display font-bold mb-12 uppercase tracking-tighter">
-              Let's Build<br/>Your Legacy
+              Retain The<br/>Director
            </h2>
+           <p className="max-w-xl mx-auto text-gray-500 mb-12">
+              I am not a videographer. I am a Creative Director. <br/>
+              I build the visual systems that scale brands.
+           </p>
            <div className="flex flex-col md:flex-row justify-center gap-4">
               <a href="mailto:ermo@authentik.studio" className="px-8 py-4 bg-black text-white font-bold hover:bg-gray-800 transition-all flex items-center gap-2">
-                 <Mail className="w-4 h-4" /> Email The Director
-              </a>
-              <a href="#" className="px-8 py-4 border border-black font-bold hover:bg-gray-100 transition-all flex items-center gap-2">
-                 <Calendar className="w-4 h-4" /> Book Consultation
+                 <Mail className="w-4 h-4" /> Inquire for Creative Direction
               </a>
            </div>
         </section>

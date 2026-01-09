@@ -61,7 +61,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                <div>
                   <h2 className="text-4xl font-display font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">The<br/>Director</h2>
                   <p className="text-xs font-mono text-gray-400 mt-4 border-t border-white/10 pt-4">
-                     FREELANCE PORTFOLIO<br/>
+                     CREATIVE DIRECTION<br/>
                      <span className="text-gray-600">J-Griff • Aaron Abke</span>
                   </p>
                </div>
