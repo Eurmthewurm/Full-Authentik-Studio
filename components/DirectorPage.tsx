@@ -214,7 +214,7 @@ const DirectorPage: React.FC = () => {
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
                         <img 
-                           src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1000&auto=format&fit=crop" // Placeholder for Aaron Headshot
+                           src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" // REPLACED: Better placeholder matching the smiling headshot vibe
                            alt="Aaron Abke Portrait" 
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -235,7 +235,7 @@ const DirectorPage: React.FC = () => {
                         <div className="bg-[#161a25] px-4 py-3 border-b border-white/5 flex items-center justify-between">
                            <div className="flex items-center gap-3">
                               <div className="relative">
-                                 <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100" className="w-8 h-8 rounded-full object-cover" />
+                                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100" className="w-8 h-8 rounded-full object-cover" />
                                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[#161a25]"></div>
                               </div>
                               <div>
@@ -290,7 +290,7 @@ const DirectorPage: React.FC = () => {
                            {/* Aaron Reply */}
                            <div className="flex gap-4 items-start">
                               <div className="w-10 h-10 rounded-full bg-blue-900 flex-shrink-0 overflow-hidden border border-white/10 relative">
-                                  <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=100" alt="Aaron" className="w-full h-full object-cover" />
+                                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100" alt="Aaron" className="w-full h-full object-cover" />
                                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-white rounded-full flex items-center justify-center">
                                      <div className="w-2 h-2 bg-black rounded-full text-[4px] flex items-center justify-center font-bold">4</div>
                                   </div>
@@ -326,29 +326,29 @@ const DirectorPage: React.FC = () => {
         </section>
 
         {/* 04. CASE STUDY 03: THE GREAT AWAKENING (Compact, Gold/Blue Aesthetic) */}
-        <section className="py-24 px-4 md:px-12 bg-[#050505] text-white border-t border-white/10 relative overflow-hidden">
+        <section className="py-20 px-4 md:px-12 bg-[#050505] text-white border-t border-white/10 relative overflow-hidden">
            {/* Abstract Background - Gold/Blue theme */}
            <div className="absolute inset-0 bg-gradient-to-b from-[#0a0f1c] to-[#050505]"></div>
-           <div className="absolute top-0 right-0 w-[60vw] h-[600px] bg-blue-900/10 blur-[120px] pointer-events-none"></div>
-           <div className="absolute bottom-0 left-0 w-[40vw] h-[400px] bg-yellow-600/5 blur-[100px] pointer-events-none"></div>
+           <div className="absolute top-0 right-0 w-[50vw] h-[500px] bg-blue-900/10 blur-[100px] pointer-events-none"></div>
+           <div className="absolute bottom-0 left-0 w-[30vw] h-[300px] bg-yellow-600/5 blur-[80px] pointer-events-none"></div>
 
-           <div className="max-w-[1400px] mx-auto relative z-10">
-               <div className="flex items-center gap-4 mb-8 justify-center">
+           <div className="max-w-[1200px] mx-auto relative z-10">
+               <div className="flex items-center gap-4 mb-6 justify-center">
                    <span className="w-8 h-px bg-yellow-500/50"></span>
-                   <span className="font-mono text-xs text-yellow-500 tracking-widest uppercase">The Great Awakening • Collaboration</span>
+                   <span className="font-mono text-xs text-yellow-500 tracking-widest uppercase">Collaboration</span>
                    <span className="w-8 h-px bg-yellow-500/50"></span>
                </div>
 
-               <div className="text-center mb-12">
-                   <h2 className="text-4xl md:text-6xl font-display font-bold uppercase tracking-tight text-white mb-4">
+               <div className="text-center mb-8">
+                   <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tight text-white mb-2">
                       The Great <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">Awakening</span>
                    </h2>
-                   <p className="text-gray-400 max-w-xl mx-auto text-sm md:text-base">
+                   <p className="text-gray-400 max-w-lg mx-auto text-xs md:text-sm">
                       The Story of Humanity's Evolution. Featuring Aaron Abke & Jeremy Griffin.
                    </p>
                </div>
 
-               <div className="max-w-4xl mx-auto">
+               <div className="max-w-3xl mx-auto">
                    {/* YouTube Hook */}
                    <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-yellow-500/20 relative group">
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10"></div>
@@ -361,18 +361,17 @@ const DirectorPage: React.FC = () => {
                       ></iframe>
                    </div>
                    
-                   <div className="flex justify-between items-start mt-6 px-2">
+                   <div className="flex justify-between items-center mt-4 px-2">
                        <div>
-                          <p className="text-lg font-bold text-white">Episode 01: The Hook</p>
-                          <p className="text-xs text-gray-500 font-mono mt-1">EDITED BY ERMO</p>
+                          <p className="text-base font-bold text-white">Episode 01: The Hook</p>
                        </div>
                        <a 
                           href="https://www.youtube.com/@TheGreatAwakeningPodcast"
                           target="_blank"
                           rel="noreferrer" 
-                          className="flex items-center gap-2 text-yellow-500 hover:text-white transition-colors text-sm font-bold uppercase tracking-widest"
+                          className="flex items-center gap-2 text-yellow-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest"
                        >
-                          Watch Full Series <ArrowRight className="w-4 h-4" />
+                          Watch Series <ArrowRight className="w-3 h-3" />
                        </a>
                    </div>
                </div>
