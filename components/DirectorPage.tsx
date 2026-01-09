@@ -1,5 +1,5 @@
 import React from 'react';
-import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio } from 'lucide-react';
+import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio, ExternalLink } from 'lucide-react';
 
 const DirectorPage: React.FC = () => {
   return (
@@ -59,7 +59,6 @@ const DirectorPage: React.FC = () => {
 
               {/* THE COUCH PHOTO - HERO */}
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 mb-24 grayscale hover:grayscale-0 transition-all duration-1000 cursor-none group">
-                  {/* REPLACE WITH COUCH PHOTO */}
                   <img 
                      src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop" 
                      alt="Ermo and J-Griff Strategy Session" 
@@ -124,27 +123,50 @@ const DirectorPage: React.FC = () => {
                  </div>
               </div>
 
-              {/* Testimonial Video Placeholder */}
-              <div className="bg-black text-white p-4 md:p-12 relative overflow-hidden">
-                 <div className="absolute top-0 right-0 p-8 opacity-20 font-display text-9xl font-bold pointer-events-none">PROOF</div>
-                 <div className="relative z-10 flex flex-col md:flex-row gap-12 items-center">
-                    <div className="flex-1">
-                       <div className="w-full aspect-video bg-[#111] border border-white/20 flex items-center justify-center group cursor-pointer relative overflow-hidden">
-                          {/* PLACEHOLDER FOR VIDEO THUMBNAIL */}
-                          <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop')] bg-cover bg-center opacity-50"></div>
-                          <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center text-black group-hover:scale-110 transition-transform relative z-20">
-                             <Play className="w-6 h-6 ml-1" />
-                          </div>
+              {/* VIMEO TESTIMONIAL EMBED */}
+              <div className="bg-black text-white p-6 md:p-12 relative overflow-hidden rounded-xl md:rounded-3xl shadow-2xl">
+                 <div className="absolute top-0 right-0 p-8 opacity-20 font-display text-9xl font-bold pointer-events-none text-white/10">PROOF</div>
+                 
+                 <div className="relative z-10 flex flex-col lg:flex-row gap-12 items-start">
+                    {/* Video Player */}
+                    <div className="flex-1 w-full group">
+                       <h3 className="text-xs font-mono text-gray-500 mb-4 uppercase tracking-widest flex items-center gap-2">
+                          <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
+                          The Debrief • J-Griff x Ermo
+                       </h3>
+                       <div className="w-full aspect-video bg-[#111] border border-white/20 relative overflow-hidden shadow-2xl rounded-lg">
+                          <iframe 
+                             src="https://player.vimeo.com/video/1112128628?title=0&byline=0&portrait=0" 
+                             className="absolute inset-0 w-full h-full"
+                             frameBorder="0" 
+                             allow="autoplay; fullscreen; picture-in-picture" 
+                             allowFullScreen
+                          ></iframe>
                        </div>
                     </div>
-                    <div className="flex-1">
+                    
+                    {/* Quote & Context */}
+                    <div className="flex-1 flex flex-col justify-center h-full lg:pt-8">
                        <Quote className="w-12 h-12 text-blue-500 mb-6" />
-                       <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-4">
-                          "Ermo is the secret weapon. He understands the physics of attention better than anyone I've worked with."
+                       <h3 className="text-2xl md:text-3xl font-bold leading-tight mb-6">
+                          "We went from $2M to $8M. Ermo was the architect of the visual standard that made that pricing possible."
                        </h3>
-                       <div className="flex items-center gap-4">
-                          <div className="h-px w-12 bg-white/50"></div>
-                          <p className="font-mono text-sm text-gray-400">J-GRIFF • FOUNDER</p>
+                       
+                       <div className="flex items-center gap-4 mb-8">
+                          <div className="w-12 h-12 bg-gray-800 rounded-full overflow-hidden">
+                              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=200&auto=format&fit=crop" className="w-full h-full object-cover" />
+                          </div>
+                          <div>
+                              <p className="font-bold text-white">JEREMY GRIFFIN</p>
+                              <p className="font-mono text-xs text-gray-400">FOUNDER, LUC MASTERMIND</p>
+                          </div>
+                       </div>
+                       
+                       <div className="p-6 bg-white/5 border border-white/10 rounded-lg">
+                           <p className="text-gray-400 text-sm leading-relaxed">
+                               <strong className="text-white block mb-2">The Debrief</strong>
+                               In this video, we discuss the exact "Private Equity" aesthetic shift that allowed J-Griff to dominate the high-ticket coaching space before his exit.
+                           </p>
                        </div>
                     </div>
                  </div>
@@ -158,6 +180,7 @@ const DirectorPage: React.FC = () => {
            
            {/* Abstract Background for Aaron's Section */}
            <div className="absolute top-0 right-0 w-[50vw] h-full bg-blue-900/5 blur-3xl pointer-events-none"></div>
+           <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-blue-900/50 to-transparent"></div>
 
            <div className="max-w-[1800px] mx-auto relative z-10">
               
@@ -185,10 +208,10 @@ const DirectorPage: React.FC = () => {
               {/* Main Content Grid */}
               <div className="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
                  
-                 {/* Visuals Left */}
+                 {/* Visuals Left - Podcast Identity */}
                  <div className="md:col-span-5 relative">
-                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10 group">
-                       {/* PLACEHOLDER: Podcast Cover Art */}
+                    <div className="relative aspect-[4/5] rounded-lg overflow-hidden border border-white/10 group shadow-2xl">
+                       {/* Podcast Cover Art Placeholder */}
                        <img 
                           src="https://images.unsplash.com/photo-1478737270239-2f02b77ac6d5?q=80&w=1000&auto=format&fit=crop" 
                           alt="The Great Awakening Podcast Cover" 
@@ -197,21 +220,29 @@ const DirectorPage: React.FC = () => {
                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
                        <div className="absolute bottom-8 left-8">
                           <div className="flex items-center gap-2 mb-2">
-                             <div className="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">LIVE</div>
+                             <div className="bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded flex items-center gap-1">
+                                <Youtube className="w-3 h-3" /> LIVE
+                             </div>
                              <span className="text-xs font-mono text-gray-300">SEASON 1</span>
                           </div>
                           <p className="text-2xl font-bold">Bridging Science & Spirit</p>
                        </div>
                     </div>
                     
-                    {/* Floating Stats */}
-                    <div className="absolute -bottom-6 -right-6 bg-white text-black p-6 rounded-lg shadow-2xl hidden md:block">
-                       <p className="text-4xl font-bold font-display">300K+</p>
-                       <p className="text-xs font-mono uppercase tracking-widest text-gray-500">Subscribers</p>
+                    {/* Floating Stats Card */}
+                    <div className="absolute -bottom-6 -right-6 bg-white text-black p-6 rounded-lg shadow-2xl hidden md:block border-l-4 border-blue-600">
+                       <p className="text-5xl font-bold font-display">300K+</p>
+                       <p className="text-xs font-mono uppercase tracking-widest text-gray-500 mt-1">Subscribers</p>
+                       <div className="mt-4 pt-4 border-t border-gray-200">
+                          <p className="text-xs font-bold flex items-center gap-2">
+                             <TrendingUp className="w-3 h-3 text-green-600" />
+                             Top 1% in Niche
+                          </p>
+                       </div>
                     </div>
                  </div>
 
-                 {/* Content Right */}
+                 {/* Content Right - The Strategy */}
                  <div className="md:col-span-7 md:pl-12">
                     <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
                        "When you speak to millions, the signal must be pure."
@@ -226,7 +257,7 @@ const DirectorPage: React.FC = () => {
                     </div>
 
                     {/* Verified Chat Evidence */}
-                    <div className="bg-[#111] border border-white/10 p-6 rounded-xl mb-8 max-w-xl">
+                    <div className="bg-[#111] border border-white/10 p-6 rounded-xl mb-12 max-w-xl shadow-inner">
                        <div className="flex items-center justify-between mb-4 border-b border-white/5 pb-4">
                           <span className="text-xs font-mono text-gray-500 uppercase">Evidence.png</span>
                           <div className="flex items-center gap-1 text-green-500">
@@ -253,15 +284,21 @@ const DirectorPage: React.FC = () => {
                        </div>
                     </div>
 
-                    <a 
-                       href="https://www.youtube.com/@AaronAbke"
-                       target="_blank"
-                       rel="noreferrer"
-                       className="inline-flex items-center gap-2 border-b border-white pb-1 font-bold text-sm hover:text-red-500 hover:border-red-500 transition-colors uppercase tracking-widest"
-                    >
-                       <Youtube className="w-4 h-4" />
-                       Visit Aaron's Channel
-                    </a>
+                    <div className="flex flex-col sm:flex-row gap-6">
+                        <a 
+                           href="https://www.youtube.com/@AaronAbke"
+                           target="_blank"
+                           rel="noreferrer"
+                           className="px-6 py-3 bg-red-600 text-white font-bold rounded hover:bg-red-700 transition-colors flex items-center gap-2 w-fit"
+                        >
+                           <Youtube className="w-5 h-5" />
+                           Visit Channel
+                        </a>
+                        <button className="px-6 py-3 border border-white text-white font-bold rounded hover:bg-white hover:text-black transition-colors flex items-center gap-2 w-fit">
+                           <ExternalLink className="w-5 h-5" />
+                           View Case Study Assets
+                        </button>
+                    </div>
                  </div>
 
               </div>
