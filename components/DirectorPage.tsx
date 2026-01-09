@@ -49,15 +49,15 @@ const DirectorPage: React.FC = () => {
                        <Clapperboard className="w-4 h-4 text-gray-400" />
                        <span className="font-mono text-xs text-gray-500 tracking-widest uppercase">Production Capabilities</span>
                     </div>
-                    <h3 className="text-2xl font-bold mb-4">You hire me for the Vision. I bring the Network.</h3>
+                    <h3 className="text-2xl font-bold mb-4">You hire me for the Vision. We build the Team together.</h3>
                     <p className="text-lg text-gray-300 font-light leading-relaxed">
                        A Creative Director is only as good as their execution team. 
-                       I work exclusively with <a href="https://johnwsullivan.com/" target="_blank" rel="noreferrer" className="text-white font-bold underline decoration-blue-500 underline-offset-4 hover:text-blue-400 transition-colors">John W. Sullivan</a> and his elite production unit. 
+                       I act as the strategic filter for your hiring process.
                        <br/><br/>
-                       While I architect the brand strategy and visual direction, this team has executed productions for the world's largest networks.
+                       We curate the specific talent required for your project—whether tapping into my existing network or scouting fresh talent together. We assemble the production unit around the vision, not the other way around.
                     </p>
                     <p className="text-xs text-gray-500 mt-6 font-mono uppercase tracking-widest">
-                       THE NETWORK'S PRODUCTION CREDITS INCLUDE:
+                       OUR NETWORK'S COLLECTIVE CREDITS INCLUDE:
                     </p>
                  </div>
               </div>
@@ -288,11 +288,14 @@ const DirectorPage: React.FC = () => {
                   <div className="lg:col-span-4 flex justify-center lg:justify-start">
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
+                        
+                        {/* UPDATED IMAGE SOURCE - Pointing to local file */}
                         <img 
-                           src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" // REPLACED: Better placeholder matching the smiling headshot vibe
-                           alt="Aaron Abke Portrait" 
+                           src="/aaron-abke.jpg" 
+                           alt="Aaron Abke Portrait - Please save your image as 'aaron-abke.jpg' in public folder" 
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
+                        
                         <div className="absolute bottom-6 left-6 z-20">
                            <div className="flex items-center gap-2 mb-1">
                               <span className="w-2 h-2 bg-green-500 rounded-full"></span>
@@ -310,7 +313,7 @@ const DirectorPage: React.FC = () => {
                         <div className="bg-[#161a25] px-4 py-3 border-b border-white/5 flex items-center justify-between">
                            <div className="flex items-center gap-3">
                               <div className="relative">
-                                 <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100" className="w-8 h-8 rounded-full object-cover" />
+                                 <img src="/aaron-abke.jpg" className="w-8 h-8 rounded-full object-cover" />
                                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[#161a25]"></div>
                               </div>
                               <div>
@@ -365,7 +368,7 @@ const DirectorPage: React.FC = () => {
                            {/* Aaron Reply */}
                            <div className="flex gap-4 items-start">
                               <div className="w-10 h-10 rounded-full bg-blue-900 flex-shrink-0 overflow-hidden border border-white/10 relative">
-                                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=100" alt="Aaron" className="w-full h-full object-cover" />
+                                  <img src="/aaron-abke.jpg" alt="Aaron" className="w-full h-full object-cover" />
                                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-white rounded-full flex items-center justify-center">
                                      <div className="w-2 h-2 bg-black rounded-full text-[4px] flex items-center justify-center font-bold">4</div>
                                   </div>
@@ -532,7 +535,7 @@ const DirectorPage: React.FC = () => {
         </section>
 
         {/* 06. HIRE FOOTER */}
-        <section id="contact-director" className="py-32 px-4 md:px-12 bg-white text-black text-center border-t border-gray-100">
+        <section id="contact" className="py-32 px-4 md:px-12 bg-white text-black text-center border-t border-gray-100">
            <p className="font-mono text-xs text-blue-600 tracking-widest mb-6">AVAILABILITY: Q3 2026</p>
            <h2 className="text-5xl md:text-9xl font-display font-bold mb-12 uppercase tracking-tighter">
               Retain The<br/>Director
@@ -541,10 +544,17 @@ const DirectorPage: React.FC = () => {
               I am not a videographer. I am a Creative Director. <br/>
               I build the visual systems that scale brands.
            </p>
-           <div className="flex flex-col md:flex-row justify-center gap-4">
+           <div className="flex flex-col items-center gap-8">
               <a href="mailto:ermo@authentik.studio" className="px-8 py-4 bg-black text-white font-bold hover:bg-gray-800 transition-all flex items-center gap-2">
                  <Mail className="w-4 h-4" /> Inquire for Creative Direction
               </a>
+              
+              <div className="text-sm text-gray-400 pt-8 border-t border-gray-100 w-full max-w-md">
+                 <p className="mb-2">Need immediate scale?</p>
+                 <a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('service')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-blue-600 font-bold hover:underline">
+                    Apply for the Service Scaling Division →
+                 </a>
+              </div>
            </div>
         </section>
 

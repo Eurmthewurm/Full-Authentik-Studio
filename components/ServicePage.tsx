@@ -25,7 +25,7 @@ const ServicePage: React.FC = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32">
             
             {/* Service 1 */}
             <div className="bg-background p-10 border border-white/5 hover:border-purple-500/50 transition-all duration-500 group flex flex-col justify-between h-[500px] relative overflow-hidden">
@@ -95,6 +95,81 @@ const ServicePage: React.FC = () => {
               </ul>
             </div>
         </div>
+
+        {/* COO Endorsement Section */}
+        <section className="border-t border-white/10 pt-24 pb-24">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+              <div>
+                 <div className="inline-flex items-center gap-2 px-3 py-1 border border-purple-500/30 rounded-full bg-purple-900/10 mb-6">
+                    <span className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+                    <span className="text-xs font-mono text-purple-400 font-bold uppercase tracking-widest">COO Endorsement</span>
+                 </div>
+                 <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    "We scaled to $8M.<br/>
+                    <span className="text-gray-500">The systems held.</span>"
+                 </h3>
+                 <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                    Creativity without infrastructure is chaos. 
+                    Jess, the COO of Level Up Collective, breaks down how we integrated high-fidelity production into their daily operations without slowing down the team.
+                 </p>
+                 
+                 <div className="flex items-center gap-4">
+                     <div className="w-12 h-12 bg-purple-900 rounded-full flex items-center justify-center font-bold text-white border border-white/10 text-sm">
+                        J
+                     </div>
+                     <div>
+                         <p className="font-bold text-white">Jess</p>
+                         <p className="text-xs font-mono text-gray-500">COO, LEVEL UP COLLECTIVE</p>
+                     </div>
+                 </div>
+              </div>
+
+              <div className="relative">
+                 <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-white/10 group">
+                    <iframe 
+                       src="https://player.vimeo.com/video/1152804047?title=0&byline=0&portrait=0" 
+                       className="absolute inset-0 w-full h-full"
+                       frameBorder="0" 
+                       allow="autoplay; fullscreen; picture-in-picture" 
+                       allowFullScreen
+                    ></iframe>
+                 </div>
+                 {/* Decorative */}
+                 <div className="absolute -z-10 -bottom-8 -right-8 w-64 h-64 bg-purple-600/20 blur-[100px] rounded-full pointer-events-none"></div>
+              </div>
+           </div>
+        </section>
+
+        {/* PARTNERSHIP PROTOCOL FOOTER */}
+        <section id="contact" className="py-24 border-t border-white/10 bg-[#0a0a0a] relative overflow-hidden">
+           <div className="absolute inset-0 bg-purple-900/5"></div>
+           
+           <div className="max-w-4xl mx-auto text-center relative z-10 px-4">
+              <Diamond className="w-12 h-12 text-purple-500 mx-auto mb-8" />
+              
+              <h2 className="text-5xl md:text-7xl font-display font-bold mb-8">
+                 INITIATE SCALE
+              </h2>
+              
+              <p className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed">
+                 We are selective. We only partner with 3 new agencies per quarter to maintain the integrity of our systems. 
+                 <br/><br/>
+                 If you are ready to remove the bottleneck of "Creative" from your business, apply below.
+              </p>
+
+              <a 
+                 href="mailto:consulting@authentik.studio?subject=Service Scaling Application"
+                 className="inline-flex items-center gap-3 px-8 py-5 bg-white text-black font-bold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 rounded-lg group"
+              >
+                 Apply for Partnership <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              </a>
+
+              <p className="mt-8 text-xs font-mono text-gray-600 uppercase tracking-widest">
+                 Current Waitlist: 4 Weeks
+              </p>
+           </div>
+        </section>
+
       </section>
     </div>
   );
