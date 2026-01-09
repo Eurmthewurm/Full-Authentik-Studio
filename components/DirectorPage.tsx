@@ -52,9 +52,9 @@ const DirectorPage: React.FC = () => {
                     <h3 className="text-2xl font-bold mb-4">You hire me for the Vision. We build the Team together.</h3>
                     <p className="text-lg text-gray-300 font-light leading-relaxed">
                        A Creative Director is only as good as their execution team. 
-                       I act as the strategic filter for your hiring process.
                        <br/><br/>
-                       We curate the specific talent required for your project—whether tapping into my existing network or scouting fresh talent together. We assemble the production unit around the vision, not the other way around.
+                       I partner with producers like <a href="https://johnwsullivan.com/" target="_blank" rel="noreferrer" className="text-white font-bold underline decoration-blue-500 underline-offset-4 hover:text-blue-400 transition-colors">John W. Sullivan</a> to curate the specific talent required for your project. 
+                       We assemble the production unit around the vision—whether utilizing existing networks or finding new talent together.
                     </p>
                     <p className="text-xs text-gray-500 mt-6 font-mono uppercase tracking-widest">
                        OUR NETWORK'S COLLECTIVE CREDITS INCLUDE:
@@ -289,10 +289,18 @@ const DirectorPage: React.FC = () => {
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
                         
-                        {/* UPDATED IMAGE SOURCE - Pointing to local file */}
+                        {/* UPDATED IMAGE SOURCE - Pointing to local file with fallback */}
                         <img 
-                           src="/aaron-abke.jpg" 
-                           alt="Aaron Abke Portrait - Please save your image as 'aaron-abke.jpg' in public folder" 
+                           src="aaron-abke.jpg" 
+                           onError={(e) => {
+                             // Fallback in case user hasn't dropped the file yet
+                             const target = e.target as HTMLImageElement;
+                             target.onerror = null;
+                             target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"; 
+                             // Optional: You could show an alert or console warning here
+                             console.warn("Please drag 'aaron-abke.jpg' into your project root folder");
+                           }}
+                           alt="Aaron Abke Portrait" 
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
                         
@@ -313,7 +321,14 @@ const DirectorPage: React.FC = () => {
                         <div className="bg-[#161a25] px-4 py-3 border-b border-white/5 flex items-center justify-between">
                            <div className="flex items-center gap-3">
                               <div className="relative">
-                                 <img src="/aaron-abke.jpg" className="w-8 h-8 rounded-full object-cover" />
+                                 <img 
+                                    src="aaron-abke.jpg" 
+                                    onError={(e) => {
+                                      const target = e.target as HTMLImageElement;
+                                      target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100";
+                                    }}
+                                    className="w-8 h-8 rounded-full object-cover" 
+                                 />
                                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[#161a25]"></div>
                               </div>
                               <div>
@@ -368,7 +383,15 @@ const DirectorPage: React.FC = () => {
                            {/* Aaron Reply */}
                            <div className="flex gap-4 items-start">
                               <div className="w-10 h-10 rounded-full bg-blue-900 flex-shrink-0 overflow-hidden border border-white/10 relative">
-                                  <img src="/aaron-abke.jpg" alt="Aaron" className="w-full h-full object-cover" />
+                                  <img 
+                                    src="aaron-abke.jpg" 
+                                    onError={(e) => {
+                                      const target = e.target as HTMLImageElement;
+                                      target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100";
+                                    }}
+                                    alt="Aaron" 
+                                    className="w-full h-full object-cover" 
+                                  />
                                   <div className="absolute bottom-0 right-0 w-3 h-3 bg-white rounded-full flex items-center justify-center">
                                      <div className="w-2 h-2 bg-black rounded-full text-[4px] flex items-center justify-center font-bold">4</div>
                                   </div>
