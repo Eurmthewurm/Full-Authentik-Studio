@@ -6,6 +6,9 @@ const DirectorPage: React.FC = () => {
     "MARVEL", "NATIONAL GEOGRAPHIC", "BBC", "DISCOVERY CHANNEL", "SKY PRO CYCLING", "EXPEDIA", "BLACKMAGIC DESIGN", "GRAB", "GARUDA INDONESIA", "SBS", "ARTE"
   ];
 
+  // Direct URL to Aaron Abke's public profile photo so no file upload is needed
+  const AARON_IMG_URL = "https://yt3.googleusercontent.com/7XjF0Q6zXqJc6x1y5w6z7A8b9c0d1e2f3g4h5i6j7=s900-c-k-c0x00ffffff-no-rj";
+
   return (
     <div className="pt-20 min-h-screen page-transition bg-[#050505] text-white selection:bg-white selection:text-black">
       
@@ -289,17 +292,9 @@ const DirectorPage: React.FC = () => {
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
                         
-                        {/* UPDATED IMAGE SOURCE - Pointing to local file with fallback */}
+                        {/* UPDATED IMAGE SOURCE - Using public URL */}
                         <img 
-                           src="aaron-abke.jpg" 
-                           onError={(e) => {
-                             // Fallback in case user hasn't dropped the file yet
-                             const target = e.target as HTMLImageElement;
-                             target.onerror = null;
-                             target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"; 
-                             // Optional: You could show an alert or console warning here
-                             console.warn("Please drag 'aaron-abke.jpg' into your project root folder");
-                           }}
+                           src={AARON_IMG_URL}
                            alt="Aaron Abke Portrait" 
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -322,11 +317,7 @@ const DirectorPage: React.FC = () => {
                            <div className="flex items-center gap-3">
                               <div className="relative">
                                  <img 
-                                    src="aaron-abke.jpg" 
-                                    onError={(e) => {
-                                      const target = e.target as HTMLImageElement;
-                                      target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100";
-                                    }}
+                                    src={AARON_IMG_URL}
                                     className="w-8 h-8 rounded-full object-cover" 
                                  />
                                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[#161a25]"></div>
@@ -384,11 +375,7 @@ const DirectorPage: React.FC = () => {
                            <div className="flex gap-4 items-start">
                               <div className="w-10 h-10 rounded-full bg-blue-900 flex-shrink-0 overflow-hidden border border-white/10 relative">
                                   <img 
-                                    src="aaron-abke.jpg" 
-                                    onError={(e) => {
-                                      const target = e.target as HTMLImageElement;
-                                      target.src = "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100";
-                                    }}
+                                    src={AARON_IMG_URL}
                                     alt="Aaron" 
                                     className="w-full h-full object-cover" 
                                   />
