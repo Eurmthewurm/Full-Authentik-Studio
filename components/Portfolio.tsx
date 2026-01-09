@@ -6,21 +6,21 @@ const projects: Project[] = [
     id: '1',
     title: 'J-Griff Mastermind',
     category: 'Scale: $2M to $8M',
-    imageUrl: 'https://picsum.photos/800/600?random=1',
+    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2000&auto=format&fit=crop',
     description: 'Comprehensive brand overhaul and creative strategy for education sector.'
   },
   {
     id: '2',
     title: 'High-Ticket Consulting',
     category: 'Creative Direction',
-    imageUrl: 'https://picsum.photos/800/600?random=2',
+    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2000&auto=format&fit=crop',
     description: 'Visual systems for 8-figure consultancy firms.'
   },
   {
     id: '3',
     title: 'eCom Aggregators',
     category: 'Asset Production',
-    imageUrl: 'https://picsum.photos/800/600?random=3',
+    imageUrl: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2000&auto=format&fit=crop',
     description: 'Standardized creative workflows for 20+ brands.'
   }
 ];

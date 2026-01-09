@@ -24,7 +24,7 @@ const App: React.FC = () => {
   const renderPage = () => {
     switch (currentPage) {
       case 'director':
-        return <DirectorPage />;
+        return <DirectorPage onNavigate={(page) => handleNavigate(page as Page)} />;
       case 'service':
         return <ServicePage />;
       case 'product':

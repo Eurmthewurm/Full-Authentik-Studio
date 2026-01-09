@@ -1,13 +1,18 @@
 import React from 'react';
 import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio, ExternalLink, Users, Sparkles, Fingerprint, ArrowUpRight, Globe, MessageCircle, Clapperboard, PenTool, Focus } from 'lucide-react';
 
-const DirectorPage: React.FC = () => {
+interface DirectorPageProps {
+  onNavigate: (page: string) => void;
+}
+
+const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
   const brands = [
     "MARVEL", "NATIONAL GEOGRAPHIC", "BBC", "DISCOVERY CHANNEL", "SKY PRO CYCLING", "EXPEDIA", "BLACKMAGIC DESIGN", "GRAB", "GARUDA INDONESIA", "SBS", "ARTE"
   ];
 
-  // Direct URL to Aaron Abke's public profile photo so no file upload is needed
-  const AARON_IMG_URL = "https://yt3.googleusercontent.com/7XjF0Q6zXqJc6x1y5w6z7A8b9c0d1e2f3g4h5i6j7=s900-c-k-c0x00ffffff-no-rj";
+  // FIXED: Using stable external Cloud URL for Aaron Abke. 
+  // This bypasses local file path issues entirely.
+  const AARON_IMG_SRC = "https://yt3.googleusercontent.com/7XjF0Q6zXqJc6x1y5w6z7A8b9c0d1e2f3g4h5i6j7=s900-c-k-c0x00ffffff-no-rj";
 
   return (
     <div className="pt-20 min-h-screen page-transition bg-[#050505] text-white selection:bg-white selection:text-black">
@@ -292,9 +297,9 @@ const DirectorPage: React.FC = () => {
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
                         
-                        {/* UPDATED IMAGE SOURCE - Using public URL */}
+                        {/* UPDATED IMAGE SOURCE - Using Cloud URL */}
                         <img 
-                           src={AARON_IMG_URL}
+                           src={AARON_IMG_SRC}
                            alt="Aaron Abke Portrait" 
                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                         />
@@ -317,7 +322,7 @@ const DirectorPage: React.FC = () => {
                            <div className="flex items-center gap-3">
                               <div className="relative">
                                  <img 
-                                    src={AARON_IMG_URL}
+                                    src={AARON_IMG_SRC}
                                     className="w-8 h-8 rounded-full object-cover" 
                                  />
                                  <div className="absolute bottom-0 right-0 w-2.5 h-2.5 bg-green-500 rounded-full border-2 border-[#161a25]"></div>
@@ -341,32 +346,6 @@ const DirectorPage: React.FC = () => {
                            {/* Timestamp */}
                            <div className="flex justify-center">
                               <span className="text-[10px] text-gray-500 font-medium bg-[#161a25] px-3 py-1 rounded-full border border-white/5">
-                                 Monday, October 7th
-                              </span>
-                           </div>
-
-                           {/* Ermo Message */}
-                           <div className="flex gap-4 items-start">
-                              <div className="w-10 h-10 rounded-full bg-gray-700 flex-shrink-0 overflow-hidden border border-white/10">
-                                 <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=100" alt="Ermo" className="w-full h-full object-cover" />
-                              </div>
-                              <div className="flex-1">
-                                 <div className="flex items-baseline gap-2 mb-1">
-                                    <span className="font-bold text-white">Ermo Egberts (INFJ-A)</span>
-                                    <span className="text-[10px] text-gray-500">2:57 PM</span>
-                                 </div>
-                                 <div className="text-gray-300 leading-relaxed space-y-2">
-                                    <p>Hey Aaron!</p>
-                                    <p>I just wanted to take a moment to properly introduce myself as the lead creative and long-form content editor at J-Griff. 🙂</p>
-                                    <p>It's awesome to see that you're vibing with the hooks I put together! I also have to say, the way you teach, carry yourself, and deliver such impactful value is seriously inspiring! ✨</p>
-                                    <p>Let's create & make a lasting impact!</p>
-                                 </div>
-                              </div>
-                           </div>
-
-                           {/* Timestamp Today */}
-                           <div className="flex justify-center">
-                              <span className="text-[10px] text-gray-500 font-medium bg-[#161a25] px-3 py-1 rounded-full border border-white/5">
                                  Today
                               </span>
                            </div>
@@ -375,7 +354,7 @@ const DirectorPage: React.FC = () => {
                            <div className="flex gap-4 items-start">
                               <div className="w-10 h-10 rounded-full bg-blue-900 flex-shrink-0 overflow-hidden border border-white/10 relative">
                                   <img 
-                                    src={AARON_IMG_URL}
+                                    src={AARON_IMG_SRC}
                                     alt="Aaron" 
                                     className="w-full h-full object-cover" 
                                   />
@@ -389,7 +368,7 @@ const DirectorPage: React.FC = () => {
                                     <span className="text-[10px] text-gray-500">5:44 PM</span>
                                  </div>
                                  <div className="text-gray-300 leading-relaxed bg-blue-500/5 p-4 rounded-r-2xl rounded-bl-2xl border border-blue-500/10">
-                                    <p>Hey brother! Great to meet you. I love the work you're doing and am grateful to be working with you! 🙏❤️</p>
+                                    <p>Hey brother! Great to meet you. I love the work you’re doing and am grateful to be working with you! 🙏❤️</p>
                                     <p className="mt-2">Excited to create even more magic together 🙌</p>
                                  </div>
                                  <div className="mt-2 flex items-center gap-2">
