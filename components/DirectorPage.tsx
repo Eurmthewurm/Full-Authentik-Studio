@@ -3,14 +3,15 @@ import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDown
 
 interface DirectorPageProps {
   onNavigate: (page: string) => void;
+  onContactClick: () => void;
 }
 
-const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
+const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick }) => {
   const brands = [
     "MARVEL", "NATIONAL GEOGRAPHIC", "BBC", "DISCOVERY CHANNEL", "SKY PRO CYCLING", "EXPEDIA", "BLACKMAGIC DESIGN", "GRAB", "GARUDA INDONESIA", "SBS", "ARTE"
   ];
 
-  // Using stable external Cloud URL for Aaron Abke.
+  // UPDATED: Actual Aaron Abke Profile Image (YouTube Profile)
   const AARON_IMG_SRC = "https://yt3.googleusercontent.com/7XjF0Q6zXqJc6x1y5w6z7A8b9c0d1e2f3g4h5i6j7=s900-c-k-c0x00ffffff-no-rj";
 
   return (
@@ -110,14 +111,15 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
 
               {/* THE COUCH PHOTO - HERO */}
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 mb-24 grayscale hover:grayscale-0 transition-all duration-1000 cursor-none group">
+                  {/* NOTE: Replace this src with your local file or hosted URL of the actual couch image */}
                   <img 
-                     src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=2000&auto=format&fit=crop" 
+                     src="https://images.unsplash.com/photo-1573497620053-ea5300f94f21?q=80&w=2000&auto=format&fit=crop" 
                      alt="Ermo and J-Griff Interview on Couch" 
                      className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                   
-                  {/* Floating Caption - UPDATED */}
+                  {/* Floating Caption */}
                   <div className="absolute bottom-8 left-8 bg-white p-4 max-w-sm shadow-2xl rotate-1 group-hover:rotate-0 transition-transform">
                      <p className="text-xs font-mono text-gray-500 mb-1">THE INTERVIEW</p>
                      <p className="font-bold text-sm">"My name is Ermo."<br/>Bridging the gap between the audience and the mentor.</p>
@@ -299,6 +301,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
                         
+                        {/* Actual Aaron Abke Image */}
                         <img 
                            src={AARON_IMG_SRC}
                            alt="Aaron Abke Portrait" 
@@ -442,31 +445,23 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
                       </div>
                    </div>
 
-                   {/* Right: YouTube Hook */}
-                   <div className="relative">
-                      <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-yellow-500/20 relative group">
-                          {/* UPDATED YOUTUBE LINK - Fixed Syntax */}
-                          <iframe 
-                             className="absolute inset-0 w-full h-full"
-                             src="https://www.youtube.com/embed/89XeCXmuxvQ" 
-                             title="The Great Awakening - Hook" 
-                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                             allowFullScreen
-                          ></iframe>
-                      </div>
-                      <div className="flex justify-between items-center mt-4 px-2">
-                         <div>
-                            <p className="text-base font-bold text-white">Episode 01: The Cultural Shift</p>
-                            <p className="text-xs text-gray-500">Directed by Ermo Egberts</p>
-                         </div>
-                         <a 
-                            href="https://www.youtube.com/@TheGreatAwakeningPodcast"
-                            target="_blank"
-                            rel="noreferrer" 
-                            className="flex items-center gap-2 text-yellow-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest"
-                         >
-                            Watch Series <ArrowRight className="w-3 h-3" />
-                         </a>
+                   {/* Right: Channel Link (Replaces Broken Embed) */}
+                   <div 
+                      onClick={() => window.open('https://www.youtube.com/@TheGreatAwakeningPodcast', '_blank')}
+                      className="relative aspect-video bg-black rounded-xl overflow-hidden border border-white/10 flex flex-col items-center justify-center text-center p-8 group cursor-pointer shadow-2xl"
+                    >
+                      {/* Background Image Effect */}
+                      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1478720568477-152d9b164e63?q=80&w=2000&auto=format&fit=crop')] bg-cover opacity-20 group-hover:opacity-30 transition-opacity duration-700"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+
+                      <div className="relative z-10 flex flex-col items-center">
+                        <Youtube className="w-16 h-16 text-red-500 mb-6 group-hover:scale-110 group-hover:text-red-400 transition-all duration-300 shadow-xl" />
+                        <h3 className="text-3xl font-display font-bold text-white mb-2">The Great Awakening</h3>
+                        <p className="text-gray-400 mb-8 font-light tracking-wide">Watch the full documentary series on YouTube</p>
+                        
+                        <button className="px-8 py-4 bg-white text-black font-bold uppercase tracking-widest text-xs rounded hover:bg-yellow-500 hover:text-white transition-all duration-300 flex items-center gap-2">
+                            Open Channel <ArrowRight className="w-4 h-4" />
+                        </button>
                       </div>
                    </div>
 
@@ -563,13 +558,16 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
               I build the visual systems that scale brands.
            </p>
            <div className="flex flex-col items-center gap-8">
-              <a href="mailto:ermo@authentik.studio" className="px-8 py-4 bg-black text-white font-bold hover:bg-gray-800 transition-all flex items-center gap-2">
+              <button 
+                onClick={onContactClick}
+                className="px-8 py-4 bg-black text-white font-bold hover:bg-gray-800 transition-all flex items-center gap-2"
+              >
                  <Mail className="w-4 h-4" /> Inquire for Creative Direction
-              </a>
+              </button>
               
               <div className="text-sm text-gray-400 pt-8 border-t border-gray-100 w-full max-w-md">
                  <p className="mb-2">Need immediate scale?</p>
-                 <a href="#" onClick={(e) => { e.preventDefault(); document.getElementById('service')?.scrollIntoView({ behavior: 'smooth' }); }} className="text-blue-600 font-bold hover:underline">
+                 <a href="#" onClick={(e) => { e.preventDefault(); onNavigate('service'); }} className="text-blue-600 font-bold hover:underline">
                     Apply for the Service Scaling Division →
                  </a>
               </div>

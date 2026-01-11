@@ -4,9 +4,10 @@ import { Menu, X } from 'lucide-react';
 interface NavBarProps {
   currentPage: string;
   onNavigate: (page: string) => void;
+  onContactClick: () => void;
 }
 
-const NavBar: React.FC<NavBarProps> = ({ currentPage, onNavigate }) => {
+const NavBar: React.FC<NavBarProps> = ({ currentPage, onNavigate, onContactClick }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
 
   const navItems = [
@@ -42,7 +43,7 @@ const NavBar: React.FC<NavBarProps> = ({ currentPage, onNavigate }) => {
               </button>
             ))}
             <button 
-              onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={onContactClick}
               className="px-6 py-2 text-xs font-bold uppercase tracking-widest bg-white text-black hover:bg-gray-200 transition-colors"
             >
               Get In Touch
@@ -75,6 +76,15 @@ const NavBar: React.FC<NavBarProps> = ({ currentPage, onNavigate }) => {
                  {item.label}
                </button>
              ))}
+             <button
+                 onClick={() => {
+                   onContactClick();
+                   setMobileMenuOpen(false);
+                 }}
+                 className="text-xl font-display font-bold uppercase text-blue-500 mt-8"
+               >
+                 Get In Touch
+               </button>
           </div>
         </div>
       )}

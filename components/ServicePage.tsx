@@ -1,7 +1,11 @@
 import React from 'react';
 import { Layers, Zap, PenTool, ArrowRight, Diamond } from 'lucide-react';
 
-const ServicePage: React.FC = () => {
+interface ServicePageProps {
+  onContactClick: () => void;
+}
+
+const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
   return (
     <div className="pt-20 min-h-screen page-transition bg-surface">
        <section className="py-24 px-4 md:px-8 max-w-[1800px] mx-auto">
@@ -157,12 +161,12 @@ const ServicePage: React.FC = () => {
                  If you are ready to remove the bottleneck of "Creative" from your business, apply below.
               </p>
 
-              <a 
-                 href="mailto:consulting@authentik.studio?subject=Service Scaling Application"
+              <button 
+                 onClick={onContactClick}
                  className="inline-flex items-center gap-3 px-8 py-5 bg-white text-black font-bold text-lg hover:bg-purple-400 hover:text-white transition-all duration-300 rounded-lg group"
               >
                  Apply for Partnership <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </button>
 
               <p className="mt-8 text-xs font-mono text-gray-600 uppercase tracking-widest">
                  Current Waitlist: 4 Weeks

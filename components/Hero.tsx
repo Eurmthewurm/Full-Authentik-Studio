@@ -123,14 +123,30 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         </div>
       </div>
       
-      {/* Footer info */}
-      <div className="w-full py-4 border-t border-white/5 flex justify-between items-center text-[10px] font-mono text-gray-600 uppercase tracking-widest">
-        <span>London / Berlin</span>
-        <div className="flex items-center gap-2">
-            <span>Scroll</span>
-            <Minus className="w-4 h-4" />
+      {/* Footer Manifesto Ticker */}
+      <div className="w-full border-t border-white/5 bg-black py-4 overflow-hidden relative">
+        <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-black to-transparent z-10"></div>
+        <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-black to-transparent z-10"></div>
+        
+        <div className="whitespace-nowrap animate-marquee flex gap-12 text-[10px] font-mono text-gray-500 uppercase tracking-widest">
+            <span>The Physics of Attention</span>
+            <span className="text-blue-500">+++</span>
+            <span>Aesthetics are Leverage</span>
+            <span className="text-blue-500">+++</span>
+            <span>Trust Architecture</span>
+            <span className="text-blue-500">+++</span>
+            <span>Scale Without Chaos</span>
+            <span className="text-blue-500">+++</span>
+            <span>Visual Engineering</span>
+            <span className="text-blue-500">+++</span>
+            <span>The Physics of Attention</span>
+            <span className="text-blue-500">+++</span>
+            <span>Aesthetics are Leverage</span>
+            <span className="text-blue-500">+++</span>
+            <span>Trust Architecture</span>
+            <span className="text-blue-500">+++</span>
+            <span>Scale Without Chaos</span>
         </div>
-        <span>© Authentik Studio</span>
       </div>
     </div>
   );
