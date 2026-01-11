@@ -1,5 +1,5 @@
 import React from 'react';
-import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio, ExternalLink, Users, Sparkles, Fingerprint, ArrowUpRight, Globe, MessageCircle, Clapperboard, PenTool, Focus } from 'lucide-react';
+import { Film, Play, Layers, TrendingUp, Quote, Award, Mail, Calendar, ArrowDownLeft, CheckCircle2, Instagram, ArrowRight, Youtube, Radio, ExternalLink, Users, Sparkles, Fingerprint, ArrowUpRight, Globe, MessageCircle, Clapperboard, PenTool, Focus, StopCircle } from 'lucide-react';
 
 interface DirectorPageProps {
   onNavigate: (page: string) => void;
@@ -10,8 +10,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
     "MARVEL", "NATIONAL GEOGRAPHIC", "BBC", "DISCOVERY CHANNEL", "SKY PRO CYCLING", "EXPEDIA", "BLACKMAGIC DESIGN", "GRAB", "GARUDA INDONESIA", "SBS", "ARTE"
   ];
 
-  // FIXED: Using stable external Cloud URL for Aaron Abke. 
-  // This bypasses local file path issues entirely.
+  // Using stable external Cloud URL for Aaron Abke.
   const AARON_IMG_SRC = "https://yt3.googleusercontent.com/7XjF0Q6zXqJc6x1y5w6z7A8b9c0d1e2f3g4h5i6j7=s900-c-k-c0x00ffffff-no-rj";
 
   return (
@@ -112,16 +111,16 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
               {/* THE COUCH PHOTO - HERO */}
               <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-gray-100 mb-24 grayscale hover:grayscale-0 transition-all duration-1000 cursor-none group">
                   <img 
-                     src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=2000&auto=format&fit=crop" 
-                     alt="Ermo and J-Griff Strategy Session" 
+                     src="https://images.unsplash.com/photo-1559523161-0fc0d8b38a7a?q=80&w=2000&auto=format&fit=crop" 
+                     alt="Ermo and J-Griff Interview on Couch" 
                      className="absolute inset-0 w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
                   
-                  {/* Floating Caption */}
-                  <div className="absolute bottom-8 left-8 bg-white p-4 max-w-xs shadow-2xl rotate-1 group-hover:rotate-0 transition-transform">
-                     <p className="text-xs font-mono text-gray-500 mb-1">BEHIND THE SCENES</p>
-                     <p className="font-bold text-sm">Strategy session at J-Griff HQ. Mapping the organic funnel architecture.</p>
+                  {/* Floating Caption - UPDATED */}
+                  <div className="absolute bottom-8 left-8 bg-white p-4 max-w-sm shadow-2xl rotate-1 group-hover:rotate-0 transition-transform">
+                     <p className="text-xs font-mono text-gray-500 mb-1">THE INTERVIEW</p>
+                     <p className="font-bold text-sm">"My name is Ermo."<br/>Bridging the gap between the audience and the mentor.</p>
                   </div>
               </div>
 
@@ -153,22 +152,25 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
 
                  <div className="md:col-span-8">
                     <h3 className="text-3xl md:text-4xl font-bold mb-8 leading-tight">
-                       "We didn't just edit videos. We built a philosophy."
+                       "I stepped out from behind the camera to become the Bridge."
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-lg text-gray-600 leading-relaxed font-light">
                        <p>
-                          For 1.5 years, I sat in the trenches with Jeremy Griffin (J-Griff). We took <strong>The Conscious Wealth Podcast</strong> and the <strong>LUC Mastermind</strong> from a $2M operation to an $8M empire.
+                          For 1.5 years, I built the visual empire for <strong>J-Griff</strong>. But we realized the audience put him on a pedestal—he was "too far ahead" for some to relate to.
                        </p>
                        <p>
-                          The strategy was pure: High-status aesthetics, deep psychological retention editing, and a "Private Equity" visual language that separated him from every other coach in the industry.
+                          <strong>The Human Aspect:</strong> I flew out to sit on the couch with him. I didn't claim to have the answers. Instead, I asked the questions about wealth that I (and the audience) genuinely had. J-Griff explained the systems, and I represented the journey.
                        </p>
                        <div className="md:col-span-2 bg-gray-50 p-8 border-l-4 border-black mt-4">
                           <h4 className="text-black font-bold mb-2 flex items-center gap-2">
                              <TrendingUp className="w-5 h-5" />
-                             The Exit Strategy
+                             The Resonance Effect
                           </h4>
-                          <p className="text-sm">
-                             We built the brand so effectively that J-Griff decided to <strong>shut down the business at its absolute peak</strong> to pivot into his next venture. We didn't just scale a business; we completed the mission.
+                          <p className="text-sm text-gray-700 mb-2">
+                             This interview became our <strong>highest-converting asset</strong>.
+                          </p>
+                          <p className="text-sm text-gray-500 italic">
+                             "People resonated with me because I wasn't wealthy yet. I was the proxy for the audience. By seeing me—someone relatable—learning the systems in real-time, the 'impossible' goal became accessible."
                           </p>
                        </div>
                     </div>
@@ -251,7 +253,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
            </div>
         </section>
 
-        {/* 03. CASE STUDY 02: AARON ABKE (Redesigned with DM Proof + Headshot) */}
+        {/* 03. CASE STUDY 02: AARON ABKE */}
         <section className="relative w-full bg-[#161a25] text-white overflow-hidden border-t border-white/10">
             {/* Background Texture - Galaxy/Stars Banner Style */}
             <div 
@@ -297,7 +299,6 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
                      <div className="relative w-full max-w-[400px] aspect-[4/5] rounded-2xl overflow-hidden border border-white/10 shadow-2xl group">
                         <div className="absolute inset-0 bg-gradient-to-t from-[#161a25] to-transparent opacity-60 z-10"></div>
                         
-                        {/* UPDATED IMAGE SOURCE - Using Cloud URL */}
                         <img 
                            src={AARON_IMG_SRC}
                            alt="Aaron Abke Portrait" 
@@ -314,7 +315,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
                      </div>
                   </div>
 
-                  {/* Right: The DM Proof (Pixel Perfect Recreation) */}
+                  {/* Right: The DM Proof */}
                   <div className="lg:col-span-8">
                      <div className="bg-[#1f232e] rounded-xl border border-white/10 shadow-2xl overflow-hidden max-w-3xl mx-auto lg:ml-0">
                         {/* Fake Browser Header */}
@@ -399,48 +400,76 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate }) => {
            <div className="absolute top-0 right-0 w-[50vw] h-[500px] bg-blue-900/10 blur-[100px] pointer-events-none"></div>
            <div className="absolute bottom-0 left-0 w-[30vw] h-[300px] bg-yellow-600/5 blur-[80px] pointer-events-none"></div>
 
-           <div className="max-w-[1200px] mx-auto relative z-10">
+           <div className="max-w-[1600px] mx-auto relative z-10">
                <div className="flex items-center gap-4 mb-6 justify-center">
                    <span className="w-8 h-px bg-yellow-500/50"></span>
                    <span className="font-mono text-xs text-yellow-500 tracking-widest uppercase">Collaboration</span>
                    <span className="w-8 h-px bg-yellow-500/50"></span>
                </div>
 
-               <div className="text-center mb-8">
-                   <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tight text-white mb-2">
+               <div className="text-center mb-16">
+                   <h2 className="text-3xl md:text-5xl font-display font-bold uppercase tracking-tight text-white mb-4">
                       The Great <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-yellow-400 to-yellow-600">Awakening</span>
                    </h2>
-                   <p className="text-gray-400 max-w-lg mx-auto text-xs md:text-sm">
-                      The Story of Humanity's Evolution. Featuring Aaron Abke & Jeremy Griffin.
-                   </p>
                </div>
 
-               <div className="max-w-3xl mx-auto">
-                   {/* YouTube Hook */}
-                   <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-yellow-500/20 relative group">
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent pointer-events-none z-10"></div>
-                      <iframe 
-                         className="absolute inset-0 w-full h-full"
-                         src="https://www.youtube.com/embed/k8sKYCDetuw?start=0" 
-                         title="The Great Awakening - Hook" 
-                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                         allowFullScreen
-                      ></iframe>
-                   </div>
+               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                    
-                   <div className="flex justify-between items-center mt-4 px-2">
-                       <div>
-                          <p className="text-base font-bold text-white">Episode 01: The Hook</p>
-                       </div>
-                       <a 
-                          href="https://www.youtube.com/@TheGreatAwakeningPodcast"
-                          target="_blank"
-                          rel="noreferrer" 
-                          className="flex items-center gap-2 text-yellow-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest"
-                       >
-                          Watch Series <ArrowRight className="w-3 h-3" />
-                       </a>
+                   {/* Left: The Narrative Story */}
+                   <div className="space-y-8">
+                      <div>
+                         <h3 className="text-2xl font-bold mb-4">The Origin Story</h3>
+                         <p className="text-gray-400 leading-relaxed text-lg font-light">
+                            It started as a conversation between titans. <strong className="text-white">J-Griff</strong> (Conscious Wealth) and <strong className="text-white">Aaron Abke</strong> (Spiritual Intelligence) wanted to bridge the gap between their two worlds.
+                         </p>
+                      </div>
+                      
+                      <div className="pl-6 border-l-2 border-yellow-500/30">
+                         <h4 className="text-yellow-500 font-bold mb-2 text-sm uppercase tracking-wide">The Strategy</h4>
+                         <p className="text-gray-300 text-sm">
+                            We didn't want another "podcast." We wanted a cultural moment. I architected a format that felt less like an interview and more like a documentary. The audience was starving for high-level spiritual discourse with cinematic gravity.
+                         </p>
+                      </div>
+
+                      <div className="bg-white/5 rounded-xl p-6 border border-white/10">
+                         <div className="flex items-center gap-4 mb-2">
+                            <StopCircle className="w-5 h-5 text-red-500" />
+                            <span className="font-bold">The Conclusion</span>
+                         </div>
+                         <p className="text-gray-400 text-sm">
+                            The show blew up fast, becoming an instant flagship asset. However, when <strong className="text-white">J-Griff was done with the business</strong> and successfully exited the industry, we concluded the show at its peak. It stands as a completed limited series.
+                         </p>
+                      </div>
                    </div>
+
+                   {/* Right: YouTube Hook */}
+                   <div className="relative">
+                      <div className="aspect-video w-full bg-black rounded-xl overflow-hidden shadow-2xl border border-yellow-500/20 relative group">
+                          {/* UPDATED YOUTUBE LINK - Fixed Syntax */}
+                          <iframe 
+                             className="absolute inset-0 w-full h-full"
+                             src="https://www.youtube.com/embed/89XeCXmuxvQ" 
+                             title="The Great Awakening - Hook" 
+                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                             allowFullScreen
+                          ></iframe>
+                      </div>
+                      <div className="flex justify-between items-center mt-4 px-2">
+                         <div>
+                            <p className="text-base font-bold text-white">Episode 01: The Cultural Shift</p>
+                            <p className="text-xs text-gray-500">Directed by Ermo Egberts</p>
+                         </div>
+                         <a 
+                            href="https://www.youtube.com/@TheGreatAwakeningPodcast"
+                            target="_blank"
+                            rel="noreferrer" 
+                            className="flex items-center gap-2 text-yellow-500 hover:text-white transition-colors text-xs font-bold uppercase tracking-widest"
+                         >
+                            Watch Series <ArrowRight className="w-3 h-3" />
+                         </a>
+                      </div>
+                   </div>
+
                </div>
            </div>
         </section>
