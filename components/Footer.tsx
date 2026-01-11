@@ -1,7 +1,18 @@
 import React from 'react';
 import { Instagram, Linkedin, Twitter, ArrowUpRight } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  onNavigate?: (page: string) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
+  const handleNav = (page: string) => {
+    if (onNavigate) {
+      onNavigate(page);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-black text-white border-t border-white/10 pt-24 pb-12 px-4 md:px-12 relative overflow-hidden z-10">
        
@@ -12,7 +23,7 @@ const Footer: React.FC = () => {
        {/* Content */}
        <div className="max-w-[1800px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-24 relative z-10">
           <div className="md:col-span-2">
-             <h2 className="text-[15vw] md:text-[8vw] font-display font-bold leading-none tracking-tighter mb-8 text-white/10 select-none hover:text-white/20 transition-colors duration-700">
+             <h2 className="text-[15vw] md:text-[8vw] font-display font-bold leading-none tracking-tighter mb-8 text-white/10 select-none hover:text-white/20 transition-colors duration-700 cursor-pointer" onClick={() => handleNav('home')}>
                 AUTHENTIK
              </h2>
           </div>
@@ -20,9 +31,9 @@ const Footer: React.FC = () => {
           <div>
              <h3 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-6">Divisions</h3>
              <ul className="space-y-4 text-sm text-gray-300 font-light">
-                <li><button className="hover:text-blue-400 transition-colors flex items-center gap-2 group">The Director <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"/></button></li>
-                <li><button className="hover:text-purple-400 transition-colors flex items-center gap-2 group">Service Scaling <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"/></button></li>
-                <li><button className="hover:text-green-400 transition-colors flex items-center gap-2 group">Product Studio <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"/></button></li>
+                <li><button onClick={() => handleNav('director')} className="hover:text-blue-400 transition-colors flex items-center gap-2 group">The Director <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"/></button></li>
+                <li><button onClick={() => handleNav('service')} className="hover:text-purple-400 transition-colors flex items-center gap-2 group">Service Scaling <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"/></button></li>
+                <li><button onClick={() => handleNav('product')} className="hover:text-green-400 transition-colors flex items-center gap-2 group">Product Studio <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity"/></button></li>
              </ul>
           </div>
 

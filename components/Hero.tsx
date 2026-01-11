@@ -39,7 +39,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
         </div>
 
         {/* Unique Navigation Layout - Staggered Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 animate-fade-in-up delay-200">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-4 animate-fade-in-up delay-200 mb-24">
           
           {/* Card 1: The Director (Ermo) */}
           <div 
@@ -119,8 +119,43 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                </div>
             </div>
           </div>
-
         </div>
+
+        {/* THE PHILOSOPHY SECTION */}
+        <div className="py-24 border-t border-white/10 animate-fade-in-up delay-300">
+           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+             <div>
+                <h3 className="text-sm font-mono text-blue-500 mb-6 tracking-widest">THE PHILOSOPHY</h3>
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6">
+                   "The market doesn't buy the best product.<br/>
+                   <span className="text-gray-500">It buys the clearest signal."</span>
+                </h2>
+                <p className="text-lg text-gray-400 leading-relaxed font-light">
+                   In a high-noise economy, subtlety is invisible. You need to engineer your visual presence to cut through the static. 
+                   We don't just make things look "good". We align your aesthetic with the psychology of high-ticket trust.
+                </p>
+             </div>
+             <div className="grid grid-cols-2 gap-4">
+                <div className="bg-[#111] p-6 rounded-lg border border-white/5 hover:bg-[#161616] transition-colors">
+                   <h4 className="font-bold text-white mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-blue-500 rounded-full"></div> Signal</h4>
+                   <p className="text-xs text-gray-500 leading-relaxed">High-Fidelity inputs create High-Status perception. Pixel perfect is the minimum.</p>
+                </div>
+                <div className="bg-[#111] p-6 rounded-lg border border-white/5 hover:bg-[#161616] transition-colors">
+                   <h4 className="font-bold text-white mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-red-500 rounded-full"></div> Noise</h4>
+                   <p className="text-xs text-gray-500 leading-relaxed">Inconsistency creates hesitation. Hesitation kills conversion. Silence the friction.</p>
+                </div>
+                <div className="bg-[#111] p-6 rounded-lg border border-white/5 hover:bg-[#161616] transition-colors">
+                   <h4 className="font-bold text-white mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full"></div> Leverage</h4>
+                   <p className="text-xs text-gray-500 leading-relaxed">One asset, deployed correctly, can anchor a 7-figure brand for 12 months.</p>
+                </div>
+                <div className="bg-[#111] p-6 rounded-lg border border-white/5 hover:bg-[#161616] transition-colors">
+                   <h4 className="font-bold text-white mb-2 flex items-center gap-2"><div className="w-2 h-2 bg-purple-500 rounded-full"></div> Scale</h4>
+                   <p className="text-xs text-gray-500 leading-relaxed">Systems replace willpower. Visual Architecture replaces manual sales effort.</p>
+                </div>
+             </div>
+           </div>
+        </div>
+
       </div>
       
       {/* Footer Manifesto Ticker */}

@@ -9,6 +9,7 @@ import ContactModal from './components/ContactModal';
 import Preloader from './components/Preloader';
 import CustomCursor from './components/CustomCursor';
 import Footer from './components/Footer';
+import SoundController from './components/SoundController';
 
 type Page = 'home' | 'director' | 'service' | 'product';
 
@@ -52,6 +53,7 @@ const App: React.FC = () => {
     <div className="min-h-screen bg-background text-primary selection:bg-blue-500/30 font-sans cursor-none flex flex-col">
       <Preloader />
       <CustomCursor />
+      <SoundController />
       
       <NavBar 
         currentPage={currentPage} 
@@ -64,7 +66,7 @@ const App: React.FC = () => {
       </main>
 
       {/* Global Footer on all pages */}
-      <Footer />
+      <Footer onNavigate={(id) => handleNavigate(id as Page)} />
 
       <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       <AIConsultant />
