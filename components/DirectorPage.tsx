@@ -11,8 +11,8 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
     "MARVEL", "NATIONAL GEOGRAPHIC", "BBC", "DISCOVERY CHANNEL", "SKY PRO CYCLING", "EXPEDIA", "BLACKMAGIC DESIGN", "GRAB", "GARUDA INDONESIA", "SBS", "ARTE"
   ];
 
-  // UPDATED: Actual Aaron Abke Profile Image (YouTube Profile)
-  const AARON_IMG_SRC = "https://yt3.googleusercontent.com/7XjF0Q6zXqJc6x1y5w6z7A8b9c0d1e2f3g4h5i6j7=s900-c-k-c0x00ffffff-no-rj";
+  // UPDATED: Using the direct Imgur link for Aaron Abke
+  const AARON_IMG_SRC = "https://i.imgur.com/Guyx9aW.jpeg";
 
   return (
     <div className="pt-20 min-h-screen page-transition bg-[#050505] text-white selection:bg-white selection:text-black">
