@@ -88,6 +88,17 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                               I partner with producers like <a href="https://johnwsullivan.com/" target="_blank" rel="noreferrer" className="text-white font-bold underline decoration-blue-500 underline-offset-4 hover:text-blue-400 transition-colors">John W. Sullivan</a> to curate the specific talent required for your project.
                               We assemble the production unit around the vision—whether utilizing existing networks or finding new talent together.
                            </p>
+                           <div className="mt-6 flex items-center gap-4">
+                              <a
+                                 href="https://johnwsullivan.com/showreel"
+                                 target="_blank"
+                                 rel="noreferrer"
+                                 className="inline-flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded text-sm text-gray-400 hover:text-white hover:border-white/30 transition-all"
+                              >
+                                 <Play className="w-3 h-3" /> View Production Reel
+                              </a>
+                              <span className="text-xs text-gray-600 font-mono">BBC • NAT GEO • DISCOVERY</span>
+                           </div>
                            <p className="text-xs text-gray-500 mt-6 font-mono uppercase tracking-widest">
                               OUR NETWORK'S COLLECTIVE CREDITS INCLUDE:
                            </p>
