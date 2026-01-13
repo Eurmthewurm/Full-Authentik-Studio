@@ -668,7 +668,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                         onClick={onContactClick}
                         className="px-8 py-4 bg-black text-white font-bold hover:bg-gray-800 transition-all flex items-center gap-2"
                      >
-                        <Mail className="w-4 h-4" /> Inquire for Creative Direction
+                        <Mail className="w-4 h-4" /> Book Discovery Call
                      </button>
 
                      <div className="text-sm text-gray-400 pt-8 border-t border-gray-100 w-full max-w-md">

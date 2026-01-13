@@ -40,7 +40,9 @@ const MainContent: React.FC = () => {
     navigate(path);
   };
 
-  const openContact = () => setIsContactOpen(true);
+  const openContact = () => {
+    window.open('https://calendly.com/ermo/discoverycall', '_blank');
+  };
 
   return (
     <div className="min-h-screen bg-background text-primary selection:bg-blue-500/30 font-sans cursor-none flex flex-col">
@@ -66,7 +68,6 @@ const MainContent: React.FC = () => {
       {/* Global Footer on all pages */}
       <Footer onNavigate={handleNavigate} />
 
-      <ContactModal isOpen={isContactOpen} onClose={() => setIsContactOpen(false)} />
       <AIConsultant />
     </div>
   );
