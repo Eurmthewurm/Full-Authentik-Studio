@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+import { AnimatePresence } from 'framer-motion';
 import NavBar from './components/NavBar';
 import Hero from './components/Hero';
 import DirectorPage from './components/DirectorPage';
@@ -41,7 +43,7 @@ const MainContent: React.FC = () => {
   };
 
   const openContact = () => {
-    window.open('https://calendly.com/ermo/discoverycall', '_blank');
+    setIsContactOpen(true); // Changed to open modal
   };
 
   return (
@@ -56,28 +58,39 @@ const MainContent: React.FC = () => {
       />
 
       <main className="relative z-10 flex-1">
-        <Routes>
-          <Route path="/" element={<Hero onNavigate={handleNavigate} />} />
-          <Route path="/director" element={<DirectorPage onNavigate={handleNavigate} onContactClick={openContact} />} />
-          <Route path="/service" element={<ServicePage onContactClick={openContact} />} />
-          <Route path="/product" element={<ProductPage onContactClick={openContact} />} />
-          <Route path="*" element={<Hero onNavigate={handleNavigate} />} />
-        </Routes>
+        <AnimatePresence mode="wait">
+          <div key={location.pathname} className="w-full">
+            <Routes location={location}>
+              <Route path="/" element={<Hero onNavigate={handleNavigate} />} />
+              <Route path="/director" element={<DirectorPage onNavigate={handleNavigate} onContactClick={openContact} />} />
+              <Route path="/service" element={<ServicePage onContactClick={openContact} />} />
+              <Route path="/product" element={<ProductPage onContactClick={openContact} />} />
+              <Route path="*" element={<Hero onNavigate={handleNavigate} />} />
+            </Routes>
+          </div>
+        </AnimatePresence>
       </main>
 
       {/* Global Footer on all pages */}
       <Footer onNavigate={handleNavigate} />
 
       <AIConsultant />
+
+      <ContactModal
+        isOpen={isContactOpen}
+        onClose={() => setIsContactOpen(false)}
+      />
     </div>
   );
 };
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
-      <MainContent />
-    </BrowserRouter>
+    <HelmetProvider>
+      <BrowserRouter>
+        <MainContent />
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 
