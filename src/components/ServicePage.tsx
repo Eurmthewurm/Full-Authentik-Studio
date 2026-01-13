@@ -195,6 +195,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
                               <li>• Social Content Analysis</li>
                               <li>• Competitor Benchmarking</li>
                            </ul>
+                           <div className="mt-4 p-3 bg-green-50 group-hover:bg-green-900/20 border border-green-200 group-hover:border-green-500/30 rounded text-xs text-green-700 group-hover:text-green-400">
+                              <strong>GUARANTEE:</strong> If we don't find at least 3 actionable Trust Leaks, the Audit is free.
+                           </div>
                         </div>
                         <div className="mt-8 pt-8 border-t border-gray-100 group-hover:border-white/10 flex justify-between items-end">
                            <div>
@@ -214,20 +217,24 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
                            <div className="w-12 h-12 bg-white group-hover:bg-gray-800 rounded-full flex items-center justify-center mb-8 transition-colors">
                               <Plus className="w-6 h-6 text-black group-hover:text-white" />
                            </div>
-                           <h3 className="text-2xl font-bold mb-4">The Trust Sprint</h3>
+                           <h3 className="text-2xl font-bold mb-4">The $8M Framework</h3>
                            <p className="text-gray-500 group-hover:text-gray-400 mb-6">
-                              A 30-day overhaul of your core conversion assets. We replace your "amateur" content with "authority" assets.
+                              The exact visual system that scaled J-Griff from $2M → $8M. 30 days. Zero ads.
                            </p>
                            <ul className="space-y-2 text-sm font-mono text-gray-400 group-hover:text-gray-500">
-                              <li>• 1x Flagship VSL (Script to Screen)</li>
+                              <li>• 1x Flagship VSL (The $8M Script Structure)</li>
                               <li>• 3x Case Study Documentaries</li>
-                              <li>• Landing Page Copy Refinement</li>
+                              <li>• Landing Page Authority Overhaul</li>
                            </ul>
+                           <div className="mt-4 p-3 bg-blue-50 group-hover:bg-blue-900/20 border border-blue-200 group-hover:border-blue-500/30 rounded text-xs text-blue-700 group-hover:text-blue-400">
+                              <strong>60-DAY PROMISE:</strong> Measurable lift in qualified leads or we rebuild at no cost.
+                           </div>
                         </div>
                         <div className="mt-8 pt-8 border-t border-gray-200 group-hover:border-white/10 flex justify-between items-end">
                            <div>
                               <p className="text-xs uppercase tracking-widest text-gray-400">Investment</p>
                               <p className="text-xl font-bold">$12,000</p>
+                              <p className="text-[10px] text-gray-400 group-hover:text-gray-500">Avg. Client ROI: 8x in 6 months</p>
                            </div>
                            <ArrowRight className="w-6 h-6 -rotate-45 group-hover:rotate-0 transition-transform duration-300" />
                         </div>
@@ -265,6 +272,21 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
             {/* 4. TRACTION / PROOF */}
             <section className="py-20 border-t border-white/5 bg-[#050505]">
                <div className="max-w-[1800px] mx-auto px-4 md:px-12 text-center">
+                  {/* Results Banner */}
+                  <div className="flex flex-wrap justify-center gap-8 md:gap-16 mb-16">
+                     <div className="text-center">
+                        <p className="text-4xl md:text-5xl font-display font-bold text-white">$8M+</p>
+                        <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-2">Revenue Generated</p>
+                     </div>
+                     <div className="text-center">
+                        <p className="text-4xl md:text-5xl font-display font-bold text-white">100%</p>
+                        <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-2">Organic (Zero Ads)</p>
+                     </div>
+                     <div className="text-center">
+                        <p className="text-4xl md:text-5xl font-display font-bold text-white">8x</p>
+                        <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mt-2">Avg. Client ROI</p>
+                     </div>
+                  </div>
                   <p className="text-sm font-mono text-gray-500 uppercase tracking-widest mb-12">Trusted by founders scaling past 7-Figures</p>
                   <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
                      <h3 className="text-2xl font-bold text-white">J-GRIFF</h3>
