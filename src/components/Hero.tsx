@@ -36,7 +36,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                   >
                      <div className="flex items-center gap-4 mb-4 ml-2">
                         <span className="w-12 h-[1px] bg-white/30"></span>
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400">Est. 2011 • London • Global</span>
+                        <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400">Est. 2011 • Netherlands • Global</span>
                      </div>
                      <h1 className="text-[14vw] leading-[0.85] font-bold tracking-tighter mix-blend-difference font-display text-white">
                         AUTHENTIK
