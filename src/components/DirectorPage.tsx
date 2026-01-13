@@ -64,8 +64,8 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                            className="mb-4 md:mb-0 text-right"
                         >
                            <p className="text-xl md:text-2xl font-light text-gray-400 max-w-md ml-auto leading-tight">
-                              Organic Growth Architect.<br />
-                              <span className="text-white">From $2M to $8M.</span>
+                              Visual Infrastructure.<br />
+                              <span className="text-white">For the 8-Figure Scale.</span>
                            </p>
                         </motion.div>
                      </div>
@@ -81,9 +81,9 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                               <Clapperboard className="w-4 h-4 text-gray-400" />
                               <span className="font-mono text-xs text-gray-500 tracking-widest uppercase">Production Capabilities</span>
                            </div>
-                           <h3 className="text-2xl font-bold mb-4">You hire me for the Vision. We build the Team together.</h3>
+                           <h3 className="text-2xl font-bold mb-4">I do not hold the camera. I hold the Standard.</h3>
                            <p className="text-lg text-gray-300 font-light leading-relaxed">
-                              A Creative Director is only as good as their execution team.
+                              A Director is defined not by what they touch, but by what they refuse to compromise.
                               <br /><br />
                               I partner with producers like <a href="https://johnwsullivan.com/" target="_blank" rel="noreferrer" className="text-white font-bold underline decoration-blue-500 underline-offset-4 hover:text-blue-400 transition-colors">John W. Sullivan</a> to curate the specific talent required for your project.
                               We assemble the production unit around the vision—whether utilizing existing networks or finding new talent together.
@@ -171,11 +171,11 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                               <div className="bg-gray-50 p-6 border border-gray-200 rounded-lg">
                                  <div className="flex items-center gap-2 mb-2">
                                     <Archive className="w-4 h-4 text-gray-400" />
-                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Status Update</span>
+                                    <span className="text-xs font-bold uppercase tracking-wider text-gray-500">The Legacy Archive</span>
                                  </div>
                                  <p className="text-sm text-gray-600 leading-relaxed">
-                                    J-Griff has since <span className="font-bold text-black">exited the industry</span> and retired at his peak.
-                                    All public content, including his YouTube videos, has been <span className="text-red-600 font-bold">unpublished/archived</span>.
+                                    A completed creative cycle. Upon reaching the <span className="font-bold text-black">$8M apex</span>, the project was deliberately concluded.
+                                    Standing now as a <span className="text-black font-bold">closed-loop masterclass</span> in organic scale.
                                  </p>
                               </div>
 
@@ -269,9 +269,9 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
 
                               <h3 className="text-xs font-mono text-gray-500 mb-2 uppercase tracking-widest flex items-center gap-2">
                                  <span className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
-                                 The Human Element
+                                 Deconstructing the Pedestal
                               </h3>
-                              <h4 className="text-xl font-bold mb-6">"Bridging the Gap: The Authentic Interview"</h4>
+                              <h4 className="text-xl font-bold mb-6">"We didn't interview. We communed."</h4>
 
                               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                                  <div
@@ -580,11 +580,11 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                   <div className="max-w-[1800px] mx-auto">
                      <div className="mb-16">
                         <h2 className="text-5xl md:text-8xl font-display font-bold leading-none mb-6">
-                           THE HIERARCHY<br />OF VALUE
+                           THE DISTINCTION
                         </h2>
                         <p className="text-xl md:text-2xl text-gray-600 max-w-2xl leading-relaxed">
-                           Distinguishing "Production" from "Direction".<br />
-                           Defining the scope of practice for optimal results.
+                           Production captures reality.<br />
+                           Direction engineers it.
                         </p>
                      </div>
 
