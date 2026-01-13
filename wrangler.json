@@ -1,0 +1,10 @@
+{
+    "name": "authentik-studio",
+    "compatibility_date": "2025-01-13",
+    "assets": {
+        "directory": "./dist"
+    },
+    "observability": {
+        "enabled": true
+    }
+}
