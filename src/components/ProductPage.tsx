@@ -218,18 +218,45 @@ const ProductPage: React.FC<ProductPageProps> = ({ onContactClick }) => {
             </section>
 
             {/* 5. CTA */}
-            <section className="py-24 bg-green-900/10 border-t border-green-500/20 text-center px-4">
+            <section className="py-24 bg-green-900/10 border-t border-green-500/20 text-center px-4 relative">
                <h2 className="text-3xl md:text-5xl font-display font-bold mb-6">Dominate Your Category</h2>
                <p className="text-gray-400 max-w-lg mx-auto mb-10">
                   Don't let poor design be the reason your superior product fails.
                </p>
                <button
-                  onClick={onContactClick}
-                  className="px-10 py-4 bg-green-600 text-white font-bold rounded hover:bg-green-500 transition-colors shadow-lg shadow-green-900/20"
+                  disabled
+                  className="px-10 py-4 bg-gray-800 text-gray-500 font-bold rounded cursor-not-allowed transition-colors shadow-lg"
                >
-                  Start Your Project
+                  Coming Soon
                </button>
             </section>
+
+            {/* Cinematic Coming Soon Overlay */}
+            <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center">
+               <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
+               <motion.div
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  className="relative bg-black/60 backdrop-blur-xl border border-white/10 p-12 rounded-2xl text-center shadow-2xl pointer-events-auto"
+               >
+                  <div className="flex justify-center mb-6">
+                     <div className="bg-green-500/10 px-4 py-1 rounded-full border border-green-500/20 flex items-center gap-2">
+                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                        <span className="font-mono text-xs text-green-400 tracking-widest uppercase">Development Phase</span>
+                     </div>
+                  </div>
+                  <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tighter">COMING<br /><span className="text-green-500">SOON</span></h2>
+                  <p className="text-gray-400 max-w-xs mx-auto mb-8 font-light">
+                     We're currently finalising the SPV Studio infrastructure to ensure maximum conversion for our first cohort.
+                  </p>
+                  <button
+                     onClick={onContactClick}
+                     className="px-8 py-3 bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-green-500 hover:text-white transition-all"
+                  >
+                     Get Early Access
+                  </button>
+               </motion.div>
+            </div>
 
          </motion.div>
       </>

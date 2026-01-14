@@ -35,10 +35,13 @@ const NavBar: React.FC<NavBarProps> = ({ currentPage, onNavigate, onContactClick
               <button
                 key={item.id}
                 onClick={() => onNavigate(item.id)}
-                className={`text-sm font-medium uppercase tracking-widest transition-all duration-300 hover:text-white ${currentPage === item.id ? 'text-white border-b border-white' : 'text-gray-500'
+                className={`text-sm font-medium uppercase tracking-widest transition-all duration-300 hover:text-white flex items-center gap-2 ${currentPage === item.id ? 'text-white border-b border-white' : 'text-gray-500'
                   }`}
               >
                 {item.label}
+                {item.id === 'product' && (
+                  <span className="text-[8px] bg-green-500/20 text-green-400 px-1.5 py-0.5 rounded border border-green-500/30 leading-none">SOON</span>
+                )}
               </button>
             ))}
             <button
@@ -70,9 +73,12 @@ const NavBar: React.FC<NavBarProps> = ({ currentPage, onNavigate, onContactClick
                   onNavigate(item.id);
                   setMobileMenuOpen(false);
                 }}
-                className="text-3xl font-display font-bold uppercase hover:text-gray-500 transition-colors"
+                className="text-3xl font-display font-bold uppercase hover:text-gray-500 transition-colors flex flex-col items-center gap-1"
               >
                 {item.label}
+                {item.id === 'product' && (
+                  <span className="text-[10px] bg-green-500/20 text-green-400 px-2 py-1 rounded border border-green-500/30 leading-none tracking-widest">COMING SOON</span>
+                )}
               </button>
             ))}
             <button

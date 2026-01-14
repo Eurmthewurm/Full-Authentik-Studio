@@ -674,8 +674,8 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
                      Retain The<br />Director
                   </h2>
                   <p className="max-w-xl mx-auto text-gray-500 mb-8">
-                     I am not a videographer. I am a Creative Director. <br />
-                     I build the visual systems that scale brands from $2M to $8M.
+                     I am a Creative Director specializing in <span className="text-black font-medium">remote video production</span>. <br />
+                     Full-service: Video, Branding, Web. On-location available at premium rates.
                   </p>
                   <div className="bg-gray-50 border border-gray-200 rounded-lg p-6 max-w-md mx-auto mb-12">
                      <p className="text-sm text-gray-600 mb-2">What you get on the call:</p>

@@ -52,10 +52,14 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
                      <p className="text-xl md:text-2xl font-light text-gray-400 mb-6 leading-relaxed">
                         We install the <span className="text-white font-medium">Visual Authority Systems</span> needed to scale High-Ticket B2B offers past $50k/mo.
                      </p>
-                     <div className="flex gap-4">
+                     <div className="flex flex-wrap gap-3">
                         <div className="bg-[#111] px-4 py-2 rounded border border-white/10 flex items-center gap-2">
                            <Target className="w-4 h-4 text-purple-500" />
                            <span className="text-xs font-mono text-gray-400">TARGET: AGENCIES / COACHES</span>
+                        </div>
+                        <div className="bg-[#111] px-4 py-2 rounded border border-blue-500/20 flex items-center gap-2">
+                           <Globe className="w-4 h-4 text-blue-500" />
+                           <span className="text-xs font-mono text-blue-400">REMOTE-FIRST PRODUCTION</span>
                         </div>
                      </div>
                   </div>
@@ -173,8 +177,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
                         </h2>
                      </div>
                      <p className="md:text-right max-w-sm text-gray-500 mt-6 md:mt-0">
-                        We don't sell "hours". We install systems. <br />
-                        Choose the level of support your agency needs.
+                        Remote Video Production. Branding. Web. <br />
+                        <span className="text-black font-medium">Full-Service Creative Direction.</span>
                      </p>
                   </div>
 
@@ -255,6 +259,9 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
                               <li>• Team Management & QA</li>
                               <li>• Monthly Content Systems</li>
                            </ul>
+                           <div className="mt-4 p-3 bg-purple-50 group-hover:bg-purple-900/20 border border-purple-200 group-hover:border-purple-500/30 rounded text-xs text-purple-700 group-hover:text-purple-400">
+                              <strong>ON-LOCATION:</strong> Available at premium rates for in-person shoots.
+                           </div>
                         </div>
                         <div className="mt-8 pt-8 border-t border-gray-100 group-hover:border-white/10 flex justify-between items-end">
                            <div>

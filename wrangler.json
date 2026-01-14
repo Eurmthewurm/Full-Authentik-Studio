@@ -1,9 +1,7 @@
 {
     "name": "full-authentik-studio",
     "compatibility_date": "2025-01-13",
-    "assets": {
-        "directory": "./dist"
-    },
+    "pages_build_output_dir": "./dist",
     "observability": {
         "enabled": true
     }
