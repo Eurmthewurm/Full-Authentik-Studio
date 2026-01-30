@@ -27,11 +27,16 @@ const JGriffCaseStudy: React.FC = () => {
                             <a href="https://www.instagram.com/official_jgriff" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-blue-500 transition-colors">J-Griff</a> was doing <span className="text-white font-bold">$2M</span>. He had built it through relentless content creation.
                             But something was off.
                         </p>
-                        <p className="text-gray-400 mt-4 leading-relaxed">
+                        <p className="text-gray-400 mt-4 leading-relaxed mb-6">
                             The offer was solid. The content was consistent.
                             Yet the market was still treating him like "another wealth creator."
                             Not as the thinker. Not as the authority. Just... another voice.
                         </p>
+
+                        <a href="https://www.instagram.com/official_jgriff" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-blue-500 hover:text-white transition-colors">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+                            @official_jgriff
+                        </a>
                     </div>
 
                     <div className="border-l border-white/20 pl-6">
