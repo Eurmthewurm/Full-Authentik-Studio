@@ -8,8 +8,8 @@ const PositioningSection: React.FC = () => {
     return (
         <section className="py-24 px-4 md:px-12 max-w-[1800px] mx-auto">
             <div className="text-center mb-16">
-                <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">You don't need "More Content".<br />You need <span className="text-blue-500">Better Positioning.</span></h2>
-                <p className="text-gray-400 max-w-2xl mx-auto">The market is flooded with "content editors". Stop competing on their level.</p>
+                <h2 className="text-3xl md:text-5xl font-display font-bold mb-4">You don't need "More Content".<br />You need <span className="text-blue-500">Strategic Assets.</span></h2>
+                <p className="text-gray-400 max-w-2xl mx-auto">Focus on the impact, not the volume.</p>
             </div>
 
             <div className="bg-[#0a0a0a] rounded-2xl border border-white/10 overflow-hidden relative">
@@ -38,12 +38,12 @@ const PositioningSection: React.FC = () => {
                             className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"
                         >
                             <div className="order-2 md:order-1 opacity-50">
-                                <h3 className="text-2xl font-bold mb-6 text-gray-500">The "Commodity" Trap</h3>
+                                <h3 className="text-2xl font-bold mb-6 text-gray-500">The Production Focus</h3>
                                 <ul className="space-y-4 text-gray-400 font-mono text-sm">
-                                    <li className="flex gap-3"><span className="text-red-900 font-bold">✖</span> Focus: "Cool edits" & trend hopping.</li>
-                                    <li className="flex gap-3"><span className="text-red-900 font-bold">✖</span> Output: Gigabytes of video files.</li>
-                                    <li className="flex gap-3"><span className="text-red-900 font-bold">✖</span> Outcome: <span className="text-white">Zero extra revenue.</span></li>
-                                    <li className="flex gap-3"><span className="text-red-900 font-bold">✖</span> Reality: A glorified expense.</li>
+                                    <li className="flex gap-3"><span className="text-gray-600 font-bold">•</span> Focus: Technical Execution.</li>
+                                    <li className="flex gap-3"><span className="text-gray-600 font-bold">•</span> Output: High-volume deliverables.</li>
+                                    <li className="flex gap-3"><span className="text-gray-600 font-bold">•</span> Goal: "Good looking videos."</li>
+                                    <li className="flex gap-3"><span className="text-gray-600 font-bold">•</span> Role: Hands-on operator.</li>
                                 </ul>
                             </div>
                             <div className="order-1 md:order-2 flex justify-center">
@@ -65,22 +65,22 @@ const PositioningSection: React.FC = () => {
                                     <li className="flex gap-4 items-start bg-[#111] p-4 rounded border border-white/5 hover:border-purple-500/30 transition-colors">
                                         <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <strong className="block text-white mb-1">Diagnoses the Branding Issue</strong>
-                                            <span className="text-sm text-gray-400">"We aren't converting cold traffic because the brand feels 'cheap'."</span>
+                                            <strong className="block text-white mb-1">Diagnoses the Signal</strong>
+                                            <span className="text-sm text-gray-400">"Is the visual language accurately reflecting the depth of the philosophy?"</span>
                                         </div>
                                     </li>
                                     <li className="flex gap-4 items-start bg-[#111] p-4 rounded border border-white/5 hover:border-purple-500/30 transition-colors">
                                         <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <strong className="block text-white mb-1">Installs Strategic Trust Assets</strong>
-                                            <span className="text-sm text-gray-400">Deploys the specific VSLs and Documentaries that allow you to charge more.</span>
+                                            <strong className="block text-white mb-1">Installs the Infrastructure</strong>
+                                            <span className="text-sm text-gray-400">Deploys the signature assets that anchor your authority in the market.</span>
                                         </div>
                                     </li>
                                     <li className="flex gap-4 items-start bg-[#111] p-4 rounded border border-white/5 hover:border-purple-500/30 transition-colors">
                                         <CheckCircle className="w-5 h-5 text-purple-500 flex-shrink-0 mt-0.5" />
                                         <div>
-                                            <strong className="block text-white mb-1">Result: Measurable Revenue</strong>
-                                            <span className="text-sm text-gray-400">An investment that pays for itself by increasing conversion rate.</span>
+                                            <strong className="block text-white mb-1">Result: Resonance</strong>
+                                            <span className="text-sm text-gray-400">A brand that doesn't just sell, but leads.</span>
                                         </div>
                                     </li>
                                 </ul>

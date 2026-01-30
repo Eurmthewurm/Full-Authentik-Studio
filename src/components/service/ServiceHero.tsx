@@ -21,10 +21,17 @@ const ServiceHero: React.FC = () => {
                         <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-blue-500">AUTHORITY.</span>
                     </h1>
                 </div>
-                <div className="md:max-w-md md:ml-auto">
+                <div className="md:max-w-xl md:ml-auto">
                     <p className="text-xl md:text-2xl font-light text-gray-400 mb-6 leading-relaxed">
-                        You have the audience. You have the offer. But your brand visuals are costing you the <span className="text-white italic">premium</span>.<br />
-                        We fix the "Trust Gap" so you can <span className="text-blue-400 font-bold">raise prices</span> and convert faster.
+                        You have the audience. You have the offer.<br />
+                        You're charging $X, but you know the market would pay <span className="text-white font-bold">$3X</span>.
+                    </p>
+                    <p className="text-lg text-gray-500 leading-relaxed mb-6">
+                        Your visual presence is the gap. Not because the production is bad.
+                        Because the <span className="text-white">positioning doesn't match your standard</span>.
+                    </p>
+                    <p className="text-blue-400 italic">
+                        We diagnose where you're leaving revenue on the table. Then we build what you need to claim it.
                     </p>
                     <div className="flex flex-wrap gap-3">
                         <div className="bg-[#111] px-4 py-2 rounded border border-white/10 flex items-center gap-2">

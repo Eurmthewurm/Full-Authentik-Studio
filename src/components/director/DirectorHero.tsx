@@ -12,8 +12,8 @@ const DirectorHero: React.FC = () => {
                         transition={{ duration: 0.8 }}
                     >
                         <span className="font-mono text-xs text-blue-500 tracking-widest mb-2 block">ERMO EGBERTS</span>
-                        <h1 className="text-[12vw] leading-[0.85] font-bold font-display tracking-tighter text-white uppercase">
-                            Creative<br />Director
+                        <h1 className="text-4xl md:text-7xl leading-[1.1] font-bold font-display tracking-tight text-white uppercase mb-6">
+                            Your Brand's Visual<br />Architecture Determines<br />Your Ceiling.
                         </h1>
                     </motion.div>
                     <motion.div
@@ -22,9 +22,11 @@ const DirectorHero: React.FC = () => {
                         transition={{ delay: 0.5, duration: 0.8 }}
                         className="mb-4 md:mb-0 text-right"
                     >
-                        <p className="text-xl md:text-2xl font-light text-gray-400 max-w-md ml-auto leading-tight">
-                            The strategic partner behind <span className="text-white font-medium">Aaron Abke</span> & <span className="text-white font-medium">J-Griff</span>.<br />
-                            I build the <span className="text-blue-400">visual infrastructure</span> that turns "content" into 8-figure brands.
+                        <p className="text-lg md:text-xl font-light text-gray-400 max-w-xl ml-auto leading-relaxed">
+                            <span className="text-white font-bold block mb-2">The work speaks.</span>
+                            J-Griff went from $2M to $8M. Aaron Abke scaled to 300K+ subscribers.<br />
+                            They didn't create more content.<br />
+                            <span className="text-blue-400">They engineered their visual presence differently.</span>
                         </p>
                     </motion.div>
                 </div>
