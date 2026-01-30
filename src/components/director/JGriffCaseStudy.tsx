@@ -70,7 +70,7 @@ const JGriffCaseStudy: React.FC = () => {
                         </ul>
                         <div className="mt-8 pt-6 border-t border-white/10">
                             <p className="text-xl font-light text-center">
-                                The business went from <span className="text-white font-bold">$2M to $8M</span>.
+                                The business went from <span className="text-white font-bold">$2M to $8M</span> in just <span className="text-white font-bold">18 months</span>.
                             </p>
                         </div>
                     </div>

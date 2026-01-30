@@ -10,6 +10,7 @@ import AaronAbkeCaseStudy from './director/AaronAbkeCaseStudy';
 import GreatAwakeningCaseStudy from './director/GreatAwakeningCaseStudy';
 import DirectorDistinction from './director/DirectorDistinction';
 import DirectorFooter from './director/DirectorFooter';
+import DirectorProfile from './director/DirectorProfile';
 
 interface DirectorPageProps {
    onNavigate: (page: string) => void;
@@ -22,7 +23,6 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
    ];
 
    const AARON_IMG_SRC = "https://i.imgur.com/ip8PRov.png";
-   const COUCH_IMG_SRC = "https://i.imgur.com/NCBqnk3.jpeg";
 
    return (
       <>
@@ -46,6 +46,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
 
             <div className="relative z-10">
                <DirectorHero />
+               <DirectorProfile />
                <ProductionNetwork brands={brands} />
                <JGriffCaseStudy />
                <AaronAbkeCaseStudy aaronImgSrc={AARON_IMG_SRC} />

@@ -41,7 +41,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                               <p className="font-mono text-xs md:text-sm text-gray-500 mb-8 tracking-widest uppercase">
                                  EST. 2011 • NETHERLANDS • GLOBAL
                               </p>
-                              <h1 className="text-[12vw] leading-[0.8] font-bold font-display tracking-tighter text-white mb-12">
+                              <h1 className="text-[10vw] md:text-[11vw] leading-[0.8] font-bold font-display tracking-tighter text-white mb-12">
                                  AUTHENTIK
                               </h1>
 
