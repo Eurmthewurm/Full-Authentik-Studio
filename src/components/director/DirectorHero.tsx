@@ -13,7 +13,7 @@ const DirectorHero: React.FC = () => {
                     >
                         <span className="font-mono text-xs text-blue-500 tracking-widest mb-2 block">ERMO EGBERTS</span>
                         <h1 className="text-4xl md:text-7xl leading-[1.1] font-bold font-display tracking-tight text-white uppercase mb-6">
-                            Your Brand's Visual<br />Architecture Determines<br />Your Ceiling.
+                            Your Visual Presence Is<br />Determining Your Ceiling.
                         </h1>
                     </motion.div>
                     <motion.div
@@ -23,10 +23,10 @@ const DirectorHero: React.FC = () => {
                         className="mb-4 md:mb-0 text-right"
                     >
                         <p className="text-lg md:text-xl font-light text-gray-400 max-w-xl ml-auto leading-relaxed">
-                            <span className="text-white font-bold block mb-2">The work speaks.</span>
-                            J-Griff went from $2M to $8M. Aaron Abke scaled to 300K+ subscribers.<br />
-                            They didn't create more content.<br />
-                            <span className="text-blue-400">They engineered their visual presence differently.</span>
+                            <span className="text-white font-bold block mb-4">And You Probably Don't Know It.</span>
+                            J-Griff went from $2M to $8M. Not by making better content.<br />
+                            By engineering what his visual presence communicated.<br /><br />
+                            <span className="text-blue-400">We do that for founders hitting the gap between their offer and their market perception.</span>
                         </p>
                     </motion.div>
                 </div>
