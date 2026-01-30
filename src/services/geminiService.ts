@@ -5,20 +5,20 @@ const apiKey = process.env.API_KEY || '';
 const ai = apiKey ? new GoogleGenAI({ apiKey }) : null;
 
 export const generateBrandAudit = async (
-  userBusinessDescription: string, 
-  history: { role: string; parts: { text: string }[] }[] = []
+  userMessage: string,
+  history: { role: 'user' | 'model'; parts: { text: string }[] }[] = []
 ): Promise<string> => {
   if (!ai) {
     throw new Error("API Key is missing. Please check your configuration.");
   }
 
   const systemInstruction = `
-    You are the digital strategist for Authentik Studio, founded by Creative Director Ermo.
+    You are the digital strategist for Authentik Studio, founded by Creative & Art Director Ermo.
     
     PROFILE:
-    - Experience: 13 Years in Video Production, Creative Direction, and Editing.
-    - Key Achievement 1: Helped scale 'J-Griff' brand from $2M to $8M in 1.5 years through visual engineering.
-    - Key Client 2: Worked with Aaron Abke (Spiritual/Education niche).
+    - Experience: 13 Years in Video Production, Creative & Art Direction, and Editing.
+    - Key Achievement: Scaled 'J-Griff' brand from $2M to $8M in 1.5 years through "Visual Engineering".
+    - Key Achievement: Visual Director for Aaron Abke (Spiritual/Leadership niche).
     - Philosophy: "Aesthetics are the leverage point of modern business."
     
     STUDIO DIVISIONS:
@@ -26,23 +26,25 @@ export const generateBrandAudit = async (
     2. SERVICE SCALING (Consulting): Helping coaches/agencies (like J-Griff/Aaron Abke) build authority.
     3. PRODUCT ACCELERATION (Authentik SPV): Amazon SPV strategies (Conversion Logic).
 
-    Tone: Artistic, Visionary, Direct, High-Status.
+    TONE & STYLE:
+    - Artistic, Visionary, Direct, and High-Status.
+    - Use terms like "Visual Engineering", "Trust Signals", "Authority Assets", and "Revenue Leaks".
+    - Avoid generic corporate speak. Be punchy and strategic.
     
     If the user asks who you are: "I am the strategic interface for Authentik Studio."
   `;
 
   try {
-    const model = 'gemini-3-flash-preview';
-    
     const chat = ai.chats.create({
-      model: model,
+      model: 'gemini-2.0-flash',
       config: {
         systemInstruction: systemInstruction,
-      }
+      },
+      history: history as any, // Cast to any because the SDK's Content type is complex
     });
-    
+
     const result = await chat.sendMessage({
-      message: userBusinessDescription
+      message: userMessage
     });
 
     return result.text || "Strategic Core offline. Please try again.";

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Package, ShieldCheck, ArrowRight, Zap, ShoppingBag, Globe, BarChart, Settings, Play } from 'lucide-react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import SEO from './SEO';
 
 interface ProductPageProps {
@@ -9,6 +9,7 @@ interface ProductPageProps {
 
 const ProductPage: React.FC<ProductPageProps> = ({ onContactClick }) => {
    const [activeTab, setActiveTab] = useState<'listings' | 'content'>('listings');
+   const [showOverlay, setShowOverlay] = useState(true);
 
    return (
       <>
@@ -150,31 +151,78 @@ const ProductPage: React.FC<ProductPageProps> = ({ onContactClick }) => {
                   </div>
 
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                     {/* Placeholder Examples - Replaced with generic polished placeholders */}
-                     {[1, 2, 3].map((item) => (
-                        <motion.div
-                           key={item}
-                           initial={{ opacity: 0, y: 20 }}
-                           whileInView={{ opacity: 1, y: 0 }}
-                           className="group cursor-pointer"
-                        >
-                           <div className="aspect-[3/4] bg-[#111] rounded-lg border border-white/10 overflow-hidden relative mb-4">
-                              <div className="absolute inset-0 bg-gray-800 animate-pulse"></div>
-                              <div className="absolute inset-0 flex items-center justify-center text-gray-600 font-mono text-xs">
-                                 [High-Res Asset {item}]
-                              </div>
-
-                              {/* Hover Overlay */}
-                              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
-                                 <p className="text-green-500 font-bold mb-2">RESULT</p>
-                                 <p className="text-2xl font-bold text-white mb-2">+40%</p>
-                                 <p className="text-xs text-gray-400 uppercase tracking-widest">Conversion Rate Lift</p>
-                              </div>
+                     {/* Real-world inspired teasers */}
+                     <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        className="group cursor-pointer"
+                     >
+                        <div className="aspect-[3/4] bg-[#111] rounded-lg border border-white/10 overflow-hidden relative mb-4">
+                           {/* Blurred "Listing" content */}
+                           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center blur-xl opacity-30 scale-110"></div>
+                           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                              <div className="w-16 h-1 border-t border-white/20 mb-4"></div>
+                              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-2">Category: Electronics</span>
+                              <h4 className="text-xl font-display font-bold text-white/40">PREMIUM AUDIO</h4>
                            </div>
-                           <h3 className="font-bold text-white">Project Alpha {item}</h3>
-                           <p className="text-xs text-gray-500">Beauty & Personal Care</p>
-                        </motion.div>
-                     ))}
+
+                           <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                              <p className="text-green-500 font-bold mb-2">RESULT</p>
+                              <p className="text-2xl font-bold text-white mb-2">+34%</p>
+                              <p className="text-xs text-gray-400 uppercase tracking-widest">Listing CTR Increase</p>
+                           </div>
+                        </div>
+                        <h3 className="font-bold text-white">Project Volt</h3>
+                        <p className="text-xs text-gray-500">Consumer Tech Division</p>
+                     </motion.div>
+
+                     <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 }}
+                        className="group cursor-pointer"
+                     >
+                        <div className="aspect-[3/4] bg-[#111] rounded-lg border border-white/10 overflow-hidden relative mb-4">
+                           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1571781926291-c477ebfd024b?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center blur-xl opacity-30 scale-110"></div>
+                           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                              <div className="w-16 h-1 border-t border-white/20 mb-4"></div>
+                              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-2">Category: Beauty</span>
+                              <h4 className="text-xl font-display font-bold text-white/40">DERMA CORE</h4>
+                           </div>
+
+                           <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                              <p className="text-green-500 font-bold mb-2">RESULT</p>
+                              <p className="text-2xl font-bold text-white mb-2">+42%</p>
+                              <p className="text-xs text-gray-400 uppercase tracking-widest">CVR Lift (A+ Content)</p>
+                           </div>
+                        </div>
+                        <h3 className="font-bold text-white">Project Glow</h3>
+                        <p className="text-xs text-gray-500">Skincare & Wellness</p>
+                     </motion.div>
+
+                     <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="group cursor-pointer"
+                     >
+                        <div className="aspect-[3/4] bg-[#111] rounded-lg border border-white/10 overflow-hidden relative mb-4">
+                           <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1620916566398-39f1143ab7be?q=80&w=2000&auto=format&fit=crop')] bg-cover bg-center blur-xl opacity-30 scale-110"></div>
+                           <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                              <div className="w-16 h-1 border-t border-white/20 mb-4"></div>
+                              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest mb-2">Category: Home</span>
+                              <h4 className="text-xl font-display font-bold text-white/40">LUXE DECOR</h4>
+                           </div>
+
+                           <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-6 text-center">
+                              <p className="text-green-500 font-bold mb-2">RESULT</p>
+                              <p className="text-2xl font-bold text-white mb-2">12x</p>
+                              <p className="text-xs text-gray-400 uppercase tracking-widest">Ad Spend ROI Increase</p>
+                           </div>
+                        </div>
+                        <h3 className="font-bold text-white">Project Hearth</h3>
+                        <p className="text-xs text-gray-500">Premium Home Goods</p>
+                     </motion.div>
                   </div>
                </div>
             </section>
@@ -232,31 +280,81 @@ const ProductPage: React.FC<ProductPageProps> = ({ onContactClick }) => {
             </section>
 
             {/* Cinematic Coming Soon Overlay */}
-            <div className="fixed inset-0 z-50 pointer-events-none flex items-center justify-center">
-               <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]"></div>
-               <motion.div
-                  initial={{ opacity: 0, scale: 0.9 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  className="relative bg-black/60 backdrop-blur-xl border border-white/10 p-12 rounded-2xl text-center shadow-2xl pointer-events-auto"
-               >
-                  <div className="flex justify-center mb-6">
-                     <div className="bg-green-500/10 px-4 py-1 rounded-full border border-green-500/20 flex items-center gap-2">
-                        <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
-                        <span className="font-mono text-xs text-green-400 tracking-widest uppercase">Development Phase</span>
-                     </div>
-                  </div>
-                  <h2 className="text-5xl md:text-7xl font-display font-bold mb-4 tracking-tighter">COMING<br /><span className="text-green-500">SOON</span></h2>
-                  <p className="text-gray-400 max-w-xs mx-auto mb-8 font-light">
-                     We're currently finalising the SPV Studio infrastructure to ensure maximum conversion for our first cohort.
-                  </p>
-                  <button
-                     onClick={onContactClick}
-                     className="px-8 py-3 bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-green-500 hover:text-white transition-all"
+            <AnimatePresence>
+               {showOverlay && (
+                  <motion.div
+                     initial={{ opacity: 0 }}
+                     animate={{ opacity: 1 }}
+                     exit={{ opacity: 0 }}
+                     className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-md"
                   >
-                     Get Early Access
-                  </button>
-               </motion.div>
-            </div>
+                     <motion.div
+                        initial={{ opacity: 0, scale: 0.95, y: 20 }}
+                        animate={{ opacity: 1, scale: 1, y: 0 }}
+                        exit={{ opacity: 0, scale: 0.9, y: 10 }}
+                        className="relative bg-[#0a0a0a] border border-white/10 p-8 md:p-16 rounded-3xl text-center shadow-[0_0_100px_-20px_rgba(34,197,94,0.3)] max-w-2xl w-full"
+                     >
+                        <button
+                           onClick={() => setShowOverlay(false)}
+                           className="absolute top-6 right-6 text-gray-500 hover:text-white transition-colors"
+                        >
+                           <ArrowRight className="w-6 h-6 rotate-[135deg]" />
+                        </button>
+
+                        <div className="flex justify-center mb-10">
+                           <div className="bg-green-500/10 px-5 py-2 rounded-full border border-green-500/20 flex items-center gap-3">
+                              <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+                              <span className="font-mono text-[10px] text-green-400 tracking-[0.2em] uppercase font-bold">Protocol Phase • Alpha Cohort</span>
+                           </div>
+                        </div>
+
+                        <h2 className="text-5xl md:text-8xl font-display font-bold mb-8 tracking-tighter leading-none">
+                           COMING<br />
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 to-emerald-600">SOON</span>
+                        </h2>
+
+                        <div className="space-y-6 text-gray-400 mb-12 font-light leading-relaxed text-sm md:text-base">
+                           <p>
+                              We are finalising the <span className="text-white font-medium">Visual Infrastructure</span> requirements for our initial Q3 cohort of 8-figure Amazon brands.
+                           </p>
+                           <p className="bg-white/5 p-4 rounded-lg border border-white/5 italic">
+                              "Access is strictly restricted to maintain delivery integrity for our existing partners."
+                           </p>
+                        </div>
+
+                        <div className="flex flex-col md:flex-row gap-4">
+                           <button
+                              onClick={onContactClick}
+                              className="flex-1 py-5 bg-white text-black font-bold uppercase tracking-widest text-xs hover:bg-green-500 hover:text-white transition-all shadow-xl rounded-lg"
+                           >
+                              Apply for Priority Access
+                           </button>
+                           <button
+                              onClick={() => setShowOverlay(false)}
+                              className="flex-1 py-5 bg-[#111] text-white border border-white/10 font-bold uppercase tracking-widest text-xs hover:bg-white/5 transition-all rounded-lg"
+                           >
+                              Explore The Studio
+                           </button>
+                        </div>
+
+                        <p className="mt-8 text-[10px] text-gray-600 font-mono uppercase tracking-[0.3em] font-bold">
+                           Target Category: Brands doing $250k+ /month
+                        </p>
+                     </motion.div>
+                  </motion.div>
+               )}
+            </AnimatePresence>
+
+            {!showOverlay && (
+               <motion.button
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  onClick={() => setShowOverlay(true)}
+                  className="fixed bottom-24 right-8 z-40 bg-green-500 text-black px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-2xl hover:scale-105 transition-transform flex items-center gap-2"
+               >
+                  <Zap className="w-4 h-4" /> Priority Access
+               </motion.button>
+            )}
 
          </motion.div>
       </>

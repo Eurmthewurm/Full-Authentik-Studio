@@ -38,9 +38,9 @@ const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
             <div>
                <h3 className="font-mono text-xs text-gray-500 uppercase tracking-widest mb-6">Connect</h3>
                <ul className="space-y-4 text-sm text-gray-300 font-light">
-                  <li><a href="#" className="flex items-center gap-2 hover:text-white transition-colors group"><Instagram className="w-4 h-4 group-hover:scale-110 transition-transform" /> Instagram</a></li>
-                  <li><a href="#" className="flex items-center gap-2 hover:text-white transition-colors group"><Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" /> LinkedIn</a></li>
-                  <li><a href="#" className="flex items-center gap-2 hover:text-white transition-colors group"><Twitter className="w-4 h-4 group-hover:scale-110 transition-transform" /> Twitter</a></li>
+                  <li><a href="https://instagram.com/authentik_studio" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors group"><Instagram className="w-4 h-4 group-hover:scale-110 transition-transform" /> Instagram</a></li>
+                  <li><a href="https://linkedin.com/company/authentik-studio" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors group"><Linkedin className="w-4 h-4 group-hover:scale-110 transition-transform" /> LinkedIn</a></li>
+                  <li><a href="https://x.com/authentikstudio" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-white transition-colors group"><Twitter className="w-4 h-4 group-hover:scale-110 transition-transform" /> Twitter</a></li>
                </ul>
             </div>
          </div>

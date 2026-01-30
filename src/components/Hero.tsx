@@ -12,7 +12,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
       <>
          <SEO
             title="Visual Engineering"
-            description="Authentik Studio: The Visual Engineering firm behind 8-figure exits. Stop hiring videographers. Retain a Creative Director."
+            description="Authentik Studio: The Visual Engineering firm behind 8-figure exits. Stop hiring videographers. Retain a Creative & Art Director."
          />
          <motion.div
             initial={{ opacity: 0 }}
@@ -48,14 +48,14 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                            </p>
                            <p className="text-sm text-gray-400 font-mono">
                               The Visual Engineering firm behind 8-figure exits. <br />
-                              Stop hiring videographers. Retain a Creative Director.
+                              Stop hiring videographers. Retain a Creative & Art Director.
                            </p>
                         </div>
 
                         <div className="mt-8 md:mt-0 flex flex-col items-end gap-2">
                            <div className="flex items-center gap-2">
                               <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                              <span className="text-xs font-mono uppercase tracking-widest text-green-400">Accepting Q2 Partners</span>
+                              <span className="text-xs font-mono uppercase tracking-widest text-green-400">Accepting Q1/Q2 Partners</span>
                            </div>
                            <p className="text-[10px] text-gray-500 font-mono text-right">
                               NETWORK CREDITS: <br />MARVEL, BBC, NAT GEO, J-GRIFF
@@ -93,7 +93,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                         <div>
                            <h2 className="text-4xl font-display font-bold text-white mb-2 group-hover:text-blue-400 transition-colors">The<br />Director</h2>
                            <p className="text-xs font-mono text-gray-400 mt-4 border-t border-white/10 pt-4">
-                              CREATIVE DIRECTION<br />
+                              CREATIVE & ART DIRECTION<br />
                               <span className="text-gray-600">The Vision behind the Brand.</span>
                            </p>
                         </div>
@@ -120,7 +120,7 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                            <h2 className="text-4xl font-display font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Service<br />Scale</h2>
                            <p className="text-xs font-mono text-gray-400 mt-4 border-t border-white/10 pt-4">
                               BRAND CONSULTING<br />
-                              <span className="text-gray-600">For Agencies & Coaches ($50k+)</span>
+                              <span className="text-gray-600">For Creators & Educators ($50k+)</span>
                            </p>
                         </div>
                      </div>

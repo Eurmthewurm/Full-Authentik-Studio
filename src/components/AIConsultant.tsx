@@ -27,13 +27,24 @@ const AIConsultant: React.FC = () => {
     e.preventDefault();
     if (!input.trim() || isLoading) return;
 
-    const userMessage = input.trim();
+    const userMessageContent = input.trim();
     setInput('');
-    setMessages(prev => [...prev, { role: 'user', text: userMessage }]);
+
+    // Add user message to UI
+    setMessages(prev => [...prev, { role: 'user', text: userMessageContent }]);
     setIsLoading(true);
 
     try {
-      const response = await generateBrandAudit(userMessage);
+      // Convert UI messages to API format for history
+      // Note: We skip the first welcome message or any errors for history
+      const history = messages
+        .filter(msg => !msg.isError && msg.text !== messages[0].text)
+        .map(msg => ({
+          role: msg.role === 'user' ? 'user' : 'model',
+          parts: [{ text: msg.text }]
+        }));
+
+      const response = await generateBrandAudit(userMessageContent, history as any);
       setMessages(prev => [...prev, { role: 'model', text: response }]);
     } catch (error) {
       setMessages(prev => [...prev, { role: 'model', text: "I'm having trouble connecting to the strategy mainframe. Please try again.", isError: true }]);
@@ -42,23 +53,41 @@ const AIConsultant: React.FC = () => {
     }
   };
 
+  const loadingMessages = [
+    "Analyzing trust signals...",
+    "Engineering visual strategy...",
+    "Calculating authority lift...",
+    "Reviewing conversion logic...",
+    "Consulting the Director's playbook..."
+  ];
+  const [loadingText, setLoadingText] = useState(loadingMessages[0]);
+
+  useEffect(() => {
+    if (!isLoading) return;
+    const interval = setInterval(() => {
+      setLoadingText(prev => {
+        const currentIndex = loadingMessages.indexOf(prev);
+        return loadingMessages[(currentIndex + 1) % loadingMessages.length];
+      });
+    }, 2000);
+    return () => clearInterval(interval);
+  }, [isLoading]);
+
   return (
     <>
       {/* Toggle Button */}
       <button
         onClick={() => setIsOpen(true)}
-        className={`fixed bottom-8 right-8 z-50 p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 ${
-          isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100 bg-white text-black'
-        }`}
+        className={`fixed bottom-8 right-8 z-50 p-4 rounded-full shadow-2xl transition-all duration-300 hover:scale-110 ${isOpen ? 'scale-0 opacity-0 pointer-events-none' : 'scale-100 opacity-100 bg-white text-black'
+          }`}
       >
         <MessageSquare className="w-6 h-6" />
       </button>
 
       {/* Chat Interface */}
       <div
-        className={`fixed bottom-8 right-8 z-50 w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] bg-[#1a1a1a] border border-white/10 rounded-2xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right ${
-          isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-90 opacity-0 translate-y-10 pointer-events-none'
-        }`}
+        className={`fixed bottom-8 right-8 z-50 w-[90vw] md:w-[400px] h-[600px] max-h-[80vh] bg-[#1a1a1a] border border-white/10 rounded-2xl shadow-2xl flex flex-col transition-all duration-300 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 translate-y-0' : 'scale-90 opacity-0 translate-y-10 pointer-events-none'
+          }`}
       >
         {/* Header */}
         <div className="p-4 border-b border-white/10 flex justify-between items-center bg-[#222] rounded-t-2xl">
@@ -71,7 +100,7 @@ const AIConsultant: React.FC = () => {
               <p className="text-xs text-gray-400">Powered by Gemini</p>
             </div>
           </div>
-          <button 
+          <button
             onClick={() => setIsOpen(false)}
             className="p-2 hover:bg-white/10 rounded-full transition-colors"
           >
@@ -87,23 +116,22 @@ const AIConsultant: React.FC = () => {
               className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
             >
               <div
-                className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${
-                  msg.role === 'user'
+                className={`max-w-[80%] p-3 rounded-2xl text-sm leading-relaxed ${msg.role === 'user'
                     ? 'bg-blue-600 text-white rounded-br-none'
                     : 'bg-[#333] text-gray-200 rounded-bl-none'
-                } ${msg.isError ? 'bg-red-900/50 border border-red-500/50' : ''}`}
+                  } ${msg.isError ? 'bg-red-900/50 border border-red-500/50' : ''}`}
               >
                 {msg.text}
               </div>
             </div>
           ))}
           {isLoading && (
-             <div className="flex justify-start">
-               <div className="bg-[#333] p-3 rounded-2xl rounded-bl-none flex items-center gap-2">
-                 <Loader2 className="w-4 h-4 animate-spin text-gray-400" />
-                 <span className="text-xs text-gray-400">Analyzing strategy...</span>
-               </div>
-             </div>
+            <div className="flex justify-start">
+              <div className="bg-[#333] p-3 rounded-2xl rounded-bl-none flex items-center gap-2">
+                <Loader2 className="w-4 h-4 animate-spin text-blue-400" />
+                <span className="text-xs text-gray-400 italic">{loadingText}</span>
+              </div>
+            </div>
           )}
           <div ref={messagesEndRef} />
         </div>
