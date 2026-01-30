@@ -1,29 +1,21 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-interface JGriffCaseStudyProps {
-    couchImgSrc: string;
-}
-
-const JGriffCaseStudy: React.FC<JGriffCaseStudyProps> = ({ couchImgSrc }) => {
+const JGriffCaseStudy: React.FC = () => {
     return (
         <section className="py-24 px-4 md:px-12 max-w-[1800px] mx-auto bg-black text-white">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                {/* Visual Side */}
+                {/* Visual Side - Video Embed */}
                 <div className="relative">
-                    <div className="aspect-[4/5] w-full rounded-2xl overflow-hidden relative">
-                        <img
-                            src={couchImgSrc}
-                            alt="J-Griff Case Study"
-                            className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-80"></div>
-
-                        <div className="absolute bottom-8 left-8 right-8">
-                            <h3 className="text-3xl font-display font-bold mb-2">THE CONSCIOUS WEALTH STORY</h3>
-                            <p className="text-gray-400 font-mono text-xs uppercase tracking-widest">Case Study 001 • $2M to $8M</p>
-                        </div>
+                    <div className="aspect-video w-full rounded-2xl overflow-hidden relative border border-white/10 shadow-2xl">
+                        <iframe
+                            src="https://player.vimeo.com/video/1112128628?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            frameBorder="0"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                            style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                            title="J-Griff Testimonial"
+                        ></iframe>
                     </div>
                 </div>
 

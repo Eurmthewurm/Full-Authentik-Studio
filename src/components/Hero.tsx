@@ -36,30 +36,40 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                   >
                      <div className="flex items-center gap-4 mb-4 ml-2">
                         <span className="w-12 h-[1px] bg-white/30"></span>
-                        <span className="text-[10px] font-mono uppercase tracking-widest text-gray-400">Est. 2011 • Netherlands • Global</span>
-                     </div>
-                     <h1 className="text-[14vw] leading-[0.85] font-bold tracking-tighter mix-blend-difference font-display text-white">
-                        AUTHENTIK
-                     </h1>
-                     <div className="flex flex-col md:flex-row items-start md:items-center justify-between mt-6 border-t border-white/10 pt-6">
-                        <div className="max-w-xl">
-                           <p className="text-xl md:text-3xl text-white font-light leading-tight mb-2">
-                              We turn "Content" into <span className="text-gray-500">Capital.</span>
-                           </p>
-                           <p className="text-sm text-gray-400 font-mono">
-                              The Visual Engineering firm behind 8-figure exits. <br />
-                              Stop hiring videographers. Retain a Creative & Art Director.
-                           </p>
-                        </div>
+                        <div className="relative z-10 max-w-[1800px] mx-auto px-4 md:px-12 h-screen flex flex-col justify-center">
+                           <div className="max-w-4xl">
+                              <p className="font-mono text-xs md:text-sm text-gray-500 mb-8 tracking-widest uppercase">
+                                 EST. 2011 • NETHERLANDS • GLOBAL
+                              </p>
+                              <h1 className="text-[12vw] leading-[0.8] font-bold font-display tracking-tighter text-white mb-12">
+                                 AUTHENTIK
+                              </h1>
 
-                        <div className="mt-8 md:mt-0 flex flex-col items-end gap-2">
-                           <div className="flex items-center gap-2">
-                              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                              <span className="text-xs font-mono uppercase tracking-widest text-green-400">Accepting Q1/Q2 Partners</span>
+                              <div className="max-w-2xl">
+                                 <h2 className="text-3xl md:text-5xl font-display font-bold text-white mb-6 leading-tight">
+                                    Your Visual Presence Is Determining Your Ceiling.
+                                 </h2>
+                                 <p className="text-xl text-gray-400 leading-relaxed mb-8">
+                                    <span className="text-white font-bold block mb-2">And You Probably Don't Know It.</span>
+                                    J-Griff went from $2M to $8M. Not by making better content.<br />
+                                    By engineering what his visual presence communicated.
+                                 </p>
+                                 <p className="text-blue-500 font-medium">
+                                    We do that for founders hitting the gap between their offer and their market perception.
+                                 </p>
+                              </div>
                            </div>
-                           <p className="text-[10px] text-gray-500 font-mono text-right">
-                              NETWORK CREDITS: <br />MARVEL, BBC, NAT GEO, J-GRIFF
-                           </p>
+
+                           <div className="absolute bottom-12 right-12 text-right hidden md:block">
+                              <div className="flex items-center justify-end gap-2 mb-2">
+                                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+                                 <span className="font-mono text-xs text-green-500 tracking-widest uppercase">Accepting Q1/Q2 Partners</span>
+                              </div>
+                              <p className="font-mono text-[10px] text-gray-600 uppercase tracking-widest">
+                                 Network Credits:<br />
+                                 Marvel, BBC, Nat Geo, J-Griff
+                              </p>
+                           </div>
                         </div>
                      </div>
                   </motion.div>

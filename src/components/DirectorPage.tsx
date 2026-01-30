@@ -47,7 +47,7 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
             <div className="relative z-10">
                <DirectorHero />
                <ProductionNetwork brands={brands} />
-               <JGriffCaseStudy couchImgSrc={COUCH_IMG_SRC} />
+               <JGriffCaseStudy />
                <AaronAbkeCaseStudy aaronImgSrc={AARON_IMG_SRC} />
                <GreatAwakeningCaseStudy />
                <DirectorDistinction />
