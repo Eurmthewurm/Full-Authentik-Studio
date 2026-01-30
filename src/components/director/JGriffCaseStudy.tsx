@@ -24,7 +24,7 @@ const JGriffCaseStudy: React.FC = () => {
                     <div>
                         <h4 className="text-blue-500 font-mono text-xs uppercase tracking-widest mb-4">The Observation</h4>
                         <p className="text-xl text-gray-300 leading-relaxed font-light">
-                            J-Griff was doing <span className="text-white font-bold">$2M</span>. He had built it through relentless content creation.
+                            <a href="https://www.instagram.com/official_jgriff" target="_blank" rel="noopener noreferrer" className="text-white font-bold hover:text-blue-500 transition-colors">J-Griff</a> was doing <span className="text-white font-bold">$2M</span>. He had built it through relentless content creation.
                             But something was off.
                         </p>
                         <p className="text-gray-400 mt-4 leading-relaxed">

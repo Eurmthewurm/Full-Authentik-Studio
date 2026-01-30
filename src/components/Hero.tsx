@@ -37,11 +37,11 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
                      <div className="flex items-center gap-4 mb-4 ml-2">
                         <span className="w-12 h-[1px] bg-white/30"></span>
                         <div className="relative z-10 max-w-[1800px] mx-auto px-4 md:px-12 h-screen flex flex-col justify-center">
-                           <div className="max-w-4xl">
+                           <div className="w-full">
                               <p className="font-mono text-xs md:text-sm text-gray-500 mb-8 tracking-widest uppercase">
                                  EST. 2011 • NETHERLANDS • GLOBAL
                               </p>
-                              <h1 className="text-[10vw] md:text-[11vw] leading-[0.8] font-bold font-display tracking-tighter text-white mb-12">
+                              <h1 className="text-[8vw] md:text-[10vw] leading-[0.8] font-bold font-display tracking-tighter text-white mb-12">
                                  AUTHENTIK
                               </h1>
 
