@@ -11,8 +11,8 @@ const Hero: React.FC<HeroProps> = ({ onNavigate }) => {
    return (
       <>
          <SEO
-            title="Visual Engineering"
-            description="Authentik Studio: The Visual Engineering firm behind 8-figure exits. Stop hiring videographers. Retain a Creative & Art Director."
+            title="Visual Engineering / 8-Figure Brand Authority"
+            description="The Visual Engineering firm behind category-leading founder exits. We build the infrastructure that drives 8-figure authority and trust."
          />
          <motion.div
             initial={{ opacity: 0 }}

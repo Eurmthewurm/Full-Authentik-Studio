@@ -27,7 +27,7 @@ const ProductionNetwork: React.FC<ProductionNetworkProps> = ({ brands }) => {
                                 The focus is simple: <span className="text-white font-medium">clear vision, efficient execution,</span> and work that holds up creatively and commercially.
                             </p>
                             <p className="text-base text-gray-400">
-                                Our extended network has contributed to projects for <span className="text-white">BBC, National Geographic, and Discovery</span>, as well as category-leading founders and successful product brands including <span className="text-white">J-Griff, Aaron Abke, Pupflask, and Hartspan.</span>
+                                Our extended network has contributed to projects for <span className="text-white">BBC, National Geographic, Discovery Channel, and Village Roadshow Pictures</span>, as well as category-leading founders and successful product brands including <span className="text-white">J-Griff, Aaron Abke, Pupflask, and Blackmagic.</span>
                             </p>
                         </div>
                         <div className="mt-8 flex items-center gap-4">

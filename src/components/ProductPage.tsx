@@ -14,8 +14,8 @@ const ProductPage: React.FC<ProductPageProps> = ({ onContactClick }) => {
    return (
       <>
          <SEO
-            title="Amazon SPV Studio | Authentik Studio"
-            description="High-Conversion Amazon Content. Listings, A+ Content, and Brand Stories designed to dominate your category."
+            title="Amazon SPV Studio / High-Conversion Product Systems"
+            description="The Amazon SPV Studio specializing in High-Conversion Listing Assets. Listings, A+ Content, and Brand Stories designed for conversion dominance."
          />
          <motion.div
             initial={{ opacity: 0 }}

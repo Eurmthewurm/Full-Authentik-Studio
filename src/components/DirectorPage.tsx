@@ -27,8 +27,8 @@ const DirectorPage: React.FC<DirectorPageProps> = ({ onNavigate, onContactClick 
    return (
       <>
          <SEO
-            title="The Director | Ermo Egberts"
-            description="Organic Growth Architect. From $2M to $8M. Retain a Creative & Art Director to build your visual infrastructure."
+            title="The Director / Creative Authority"
+            description="Ermo Egberts: Creative & Art Director with 15+ years of experience building brands for 8-figure founders and global giants."
          />
          <motion.div
             initial={{ opacity: 0 }}

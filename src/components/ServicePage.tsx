@@ -18,8 +18,8 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
    return (
       <>
          <SEO
-            title="Service Scaling | Authentik Studio"
-            description="Brand Consulting for Personal Brands, Educators & Service Businesses. Scale your business past $50k/mo with Authority Content."
+            title="Visual Infrastructure | Authentik Studio"
+            description="Scale with Visual Infrastructure. We build Authority Content systems for Personal Brands, Educators & Service Businesses to bridge the positioning gap."
          />
          <motion.div
             initial={{ opacity: 0 }}

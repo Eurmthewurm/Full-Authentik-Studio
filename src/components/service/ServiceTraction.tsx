@@ -8,9 +8,17 @@ const ServiceTraction: React.FC = () => {
                 <div className="text-center mb-12">
                     <p className="text-xs font-mono text-gray-500 uppercase tracking-widest mb-4">Case Study</p>
                     <h2 className="text-4xl md:text-5xl font-display font-bold text-white mb-4">J-Griff</h2>
-                    <p className="text-gray-400 text-sm max-w-2xl mx-auto">
+                    <p className="text-gray-400 text-sm max-w-2xl mx-auto mb-6">
                         From $2M to $8M in 18 months. One flagship asset. Strategic positioning. Visual authority.
                     </p>
+                    <a
+                        href="https://www.jgriff.org/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[10px] font-mono uppercase tracking-[0.3em] text-blue-500 hover:text-white transition-all border border-blue-500/20 hover:border-white/30 px-6 py-2 rounded-full backdrop-blur-sm"
+                    >
+                        Visit Website
+                    </a>
                 </div>
 
                 {/* Metrics Grid */}
@@ -43,10 +51,13 @@ const ServiceTraction: React.FC = () => {
                 {/* Client Logos */}
                 <p className="text-sm font-mono text-gray-500 uppercase tracking-widest mb-8 text-center">Trusted by founders scaling past 7-Figures</p>
                 <div className="flex flex-wrap justify-center gap-12 md:gap-24 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
-                    <h3 className="text-2xl font-bold text-white">J-GRIFF</h3>
-                    <h3 className="text-2xl font-bold text-white">AARON ABKE</h3>
-                    <h3 className="text-2xl font-bold text-white">SKY PRO CYCLING</h3>
-                    <h3 className="text-2xl font-bold text-white">BLACKMAGIC</h3>
+                    <h3 className="text-xl font-bold text-white">J-GRIFF</h3>
+                    <h3 className="text-xl font-bold text-white">AARON ABKE</h3>
+                    <h3 className="text-xl font-bold text-white">PUPFLASK</h3>
+                    <h3 className="text-xl font-bold text-white">BBC</h3>
+                    <h3 className="text-xl font-bold text-white">NAT GEO</h3>
+                    <h3 className="text-xl font-bold text-white">DISCOVERY</h3>
+                    <h3 className="text-xl font-bold text-white">SBS</h3>
                 </div>
             </div>
         </section>

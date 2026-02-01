@@ -10,8 +10,8 @@ interface SEOProps {
 
 const SEO: React.FC<SEOProps> = ({ title, description, image, article }) => {
     const siteUrl = 'https://www.authentikstudio.com';
-    // Default to a premium "Cinematic" Unsplash image if no specific image is provided
-    const defaultImage = "https://images.unsplash.com/photo-1620641788421-7f1c32637a77?q=80&w=1200&auto=format&fit=crop";
+    // Default to a premium "Visual Infrastructure" cinematic image
+    const defaultImage = "https://images.unsplash.com/photo-1601506521937-0121a7fc2a6b?q=80&w=1200&auto=format&fit=crop";
 
     // Check if image is an absolute URL (starts with http) or a relative path
     const isAbsoluteUrl = image?.startsWith('http');

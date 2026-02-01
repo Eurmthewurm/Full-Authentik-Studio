@@ -66,29 +66,43 @@ const DirectorProfile: React.FC = () => {
                         </ul>
                     </div>
 
-                    {/* Stat Card 1 */}
+                    {/* Stat Card 1 - Updated for Social Proof */}
                     <div className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-blue-500/20 transition-colors group">
                         <Globe className="w-8 h-8 text-blue-500 mb-6 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-2xl font-bold mb-2">Global Scale</h3>
+                        <h3 className="text-2xl font-bold mb-2 text-white">Network Credits</h3>
                         <p className="text-gray-400 leading-relaxed mb-6">
-                            My work has been deployed for high-growth founders and product brands. Through my network, we access production capabilities used by global giants.
+                            Through my core production network — including DP John W. Sullivan — we leverage technical standards and storytelling expertise deployed for the world's most demanding media brands.
                         </p>
-                        <p className="text-xs font-mono text-gray-500 uppercase tracking-widest pt-6 border-t border-white/10">
-                            Direct: J-Griff, Aaron Abke, Pupflask<br />
-                            <span className="text-blue-400">Network: Marvel, BBC, Nat Geo</span>
-                        </p>
+                        <div className="pt-6 border-t border-white/10">
+                            <p className="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] mb-3">As Seen In / Network Experience:</p>
+                            <div className="flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-mono text-gray-300">
+                                <span>BBC</span>
+                                <span>NAT GEO</span>
+                                <span>DISCOVERY</span>
+                                <span>SBS</span>
+                                <span>CHANNEL 7</span>
+                                <span>VILLAGE ROADSHOW</span>
+                            </div>
+                        </div>
                     </div>
 
-                    {/* Stat Card 2 */}
+                    {/* Stat Card 2 - Updated for Client Authority */}
                     <div className="bg-[#111] p-8 rounded-2xl border border-white/5 hover:border-purple-500/20 transition-colors group">
                         <Award className="w-8 h-8 text-purple-500 mb-6 group-hover:scale-110 transition-transform" />
-                        <h3 className="text-2xl font-bold mb-2">High-Stakes Production</h3>
+                        <h3 className="text-2xl font-bold mb-2 text-white">Visual Authority</h3>
                         <p className="text-gray-400 leading-relaxed mb-6">
-                            From intimate brand documentaries to managing product campaigns. I collaborate with John (DP) to bring broadcast-level infrastructure to your brand.
+                            We take high-level production infrastructure and translate it into commercial growth systems for category-leading personal brands and product companies.
                         </p>
-                        <p className="text-xs font-mono text-gray-500 uppercase tracking-widest pt-6 border-t border-white/10">
-                            Credits: Sky Pro Cycling, Expedia, Garuda Indonesia (John Sullivan)
-                        </p>
+                        <div className="pt-6 border-t border-white/10">
+                            <p className="text-[10px] font-mono text-gray-500 uppercase tracking-[0.2em] mb-3">Direct Clients & Partnerships:</p>
+                            <div className="flex flex-wrap gap-x-6 gap-y-2 text-[11px] font-mono text-gray-300">
+                                <a href="https://www.jgriff.org/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-blue-500 transition-colors">J-GRIFF</a>
+                                <span className="text-white">AARON ABKE</span>
+                                <span className="text-white">PUPFLASK</span>
+                                <span>SKY PRO CYCLING</span>
+                                <span>BLACKMAGIC</span>
+                            </div>
+                        </div>
                     </div>
 
                     {/* Specializations */}
