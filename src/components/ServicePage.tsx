@@ -7,6 +7,7 @@ import ServiceHero from './service/ServiceHero';
 import PositioningSection from './service/PositioningSection';
 import ServiceInfrastructure from './service/ServiceInfrastructure';
 import ServiceTraction from './service/ServiceTraction';
+import ServiceFAQ from './service/ServiceFAQ';
 import ServiceCTA from './service/ServiceCTA';
 
 interface ServicePageProps {
@@ -38,6 +39,7 @@ const ServicePage: React.FC<ServicePageProps> = ({ onContactClick }) => {
                <PositioningSection />
                <ServiceInfrastructure />
                <ServiceTraction />
+               <ServiceFAQ />
                <ServiceCTA onContactClick={onContactClick} />
             </div>
          </motion.div>
